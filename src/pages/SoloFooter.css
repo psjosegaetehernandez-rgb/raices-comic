@@ -25,4 +25,10 @@
     min-height: 100vh;
     page-break-after: always;
   }
+
+  /* Sobrescribe la regla de ChapterReader.css */
+  .solo-footer .ampro-footer {
+    display: block !important;
+    visibility: visible !important;
+  }
 }
