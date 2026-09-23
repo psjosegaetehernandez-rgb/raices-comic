@@ -6,6 +6,7 @@ import { AMPROFooter } from '../components/AMPROFooter';
 import { capitulo1 } from '../data/chapters/cap1';
 import { capitulo2 } from '../data/chapters/cap2';
 import { capitulo3 } from '../data/chapters/cap3';
+import { capitulo4 } from '../data/chapters/cap4';
 import type { Chapter, Decision, DecisionOption } from '../data/types';
 import './ChapterReader.css';
 
@@ -13,6 +14,7 @@ const CHAPTERS: Record<string, Chapter> = {
   cap1: capitulo1,
   cap2: capitulo2,
   cap3: capitulo3,
+  cap4: capitulo4,
 };
 
 export function ChapterReader() {
@@ -124,11 +126,11 @@ export function ChapterReader() {
 
         <div className="reader__download">
           <p className="reader__download-text">
-            Quieres guardar este capitulo o imprimirlo?
+            Quieres guardar el comic completo (4 capitulos) o imprimirlo?
           </p>
           <a
-            href="/raices-capitulo-1.pdf"
-            download="Raices-Capitulo-1.pdf"
+            href="/raices-comic-completo.pdf"
+            download="Raices-Comic-Completo.pdf"
             className="reader__download-btn"
           >
             Descargar PDF
