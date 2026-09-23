@@ -33,6 +33,18 @@ export function Home() {
               <span className="home__chapter-arrow">→</span>
             </Link>
           </li>
+          <li className="home__chapter-item">
+            <Link to="/capitulo/cap2" className="home__chapter-link">
+              <span className="home__chapter-num">02</span>
+              <div className="home__chapter-info">
+                <h3 className="home__chapter-title">El Campamento que Respira</h3>
+                <p className="home__chapter-meta">
+                  Tatiana · Campamento Renacer, Alto Hospicio
+                </p>
+              </div>
+              <span className="home__chapter-arrow">→</span>
+            </Link>
+          </li>
         </ul>
       </section>
 

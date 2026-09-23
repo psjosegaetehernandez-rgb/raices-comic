@@ -13,7 +13,7 @@ const outputPath = join(projectRoot, 'public', outputName);
 
 console.log('');
 console.log('=========================================');
-console.log(' GENERADOR DE PDF - RAICES COMIC');
+console.log(' GENERADOR DE PDF - RAICES COMIC (v2)');
 console.log('=========================================');
 console.log('');
 console.log('URL origen: ' + url);
@@ -41,8 +41,8 @@ console.log('');
   const page = await browser.newPage();
   await page.setViewport({
     width: 800,
-    height: 1000,
-    deviceScaleFactor: 2,
+    height: 1131,
+    deviceScaleFactor: 1,
   });
 
   console.log('[2/6] Cargando pagina...');
@@ -52,7 +52,7 @@ console.log('');
   });
   console.log('      OK');
 
-  console.log('[3/6] Scroll completo para cargar todas las imagenes...');
+  console.log('[3/6] Scroll completo...');
   await page.evaluate(async () => {
     await new Promise((resolve) => {
       let totalHeight = 0;
@@ -84,7 +84,7 @@ console.log('');
       })
     );
   });
-  await new Promise((r) => setTimeout(r, 3000));
+  await new Promise((r) => setTimeout(r, 2000));
   console.log('      OK');
 
   console.log('[5/6] Activando modo impresion...');
@@ -113,12 +113,10 @@ console.log('');
   console.log(' PDF GENERADO EXITOSAMENTE');
   console.log('=========================================');
   console.log('');
-  console.log('Archivo: ' + outputPath);
-  console.log('Tamano:  ' + sizeKB + ' KB (' + sizeMB + ' MB)');
+  console.log('Tamano: ' + sizeKB + ' KB (' + sizeMB + ' MB)');
   console.log('');
 })().catch((error) => {
   console.error('');
   console.error('ERROR: ' + error.message);
-  console.error(error.stack);
   process.exit(1);
 });

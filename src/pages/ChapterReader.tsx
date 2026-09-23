@@ -4,11 +4,13 @@ import { ComicPanel } from '../components/ComicPanel';
 import { DecisionModal } from '../components/DecisionModal';
 import { AMPROFooter } from '../components/AMPROFooter';
 import { capitulo1 } from '../data/chapters/cap1';
+import { capitulo2 } from '../data/chapters/cap2';
 import type { Chapter, Decision, DecisionOption } from '../data/types';
 import './ChapterReader.css';
 
 const CHAPTERS: Record<string, Chapter> = {
   cap1: capitulo1,
+  cap2: capitulo2,
 };
 
 export function ChapterReader() {
@@ -53,11 +55,17 @@ export function ChapterReader() {
   if (!chapter) {
     return (
       <div className="reader__notfound">
-        <h1>Capítulo no encontrado</h1>
+        <h1>Capitulo no encontrado</h1>
         <Link to="/">Volver al inicio</Link>
       </div>
     );
   }
+
+  const chapterIds = Object.keys(CHAPTERS);
+  const currentIndex = chapterIds.indexOf(chapter.id);
+  const prevChapter = currentIndex > 0 ? chapterIds[currentIndex - 1] : null;
+  const nextChapter =
+    currentIndex < chapterIds.length - 1 ? chapterIds[currentIndex + 1] : null;
 
   return (
     <>
@@ -72,18 +80,19 @@ export function ChapterReader() {
           <div className="reader__cover">
             <img
               src={chapter.visual.cover}
-              alt={`Portada del capítulo ${chapter.number}: ${chapter.title}`}
+              alt={`Portada del capitulo ${chapter.number}: ${chapter.title}`}
               className="reader__cover-image"
             />
             <div className="reader__cover-overlay" aria-hidden="true" />
             <div className="reader__cover-content">
               <p className="reader__chapter-number">
-                Capítulo {chapter.number}
+                Capitulo {chapter.number}
               </p>
               <h1 className="reader__title">{chapter.title}</h1>
               <p className="reader__subtitle">{chapter.subtitle}</p>
               <p className="reader__meta">
-                {chapter.protagonist} · {chapter.location} · {chapter.estimatedMinutes} min
+                {chapter.protagonist} · {chapter.location} ·{' '}
+                {chapter.estimatedMinutes} min
               </p>
             </div>
           </div>
@@ -113,27 +122,39 @@ export function ChapterReader() {
 
         <div className="reader__download">
           <p className="reader__download-text">
-            ¿Quieres guardar este capítulo o imprimirlo?
+            Quieres guardar este capitulo o imprimirlo?
           </p>
           <a
             href="/raices-capitulo-1.pdf"
             download="Raices-Capitulo-1.pdf"
             className="reader__download-btn"
           >
-            📄 Descargar PDF
+            Descargar PDF
           </a>
         </div>
 
-        <nav className="reader__nav" aria-label="Navegación entre capítulos">
-          <Link to="/" className="reader__nav-link">
-            ← Volver al inicio
-          </Link>
+        <nav className="reader__nav" aria-label="Navegacion entre capitulos">
+          {prevChapter ? (
+            <Link to={`/capitulo/${prevChapter}`} className="reader__nav-link">
+              ← Cap. anterior
+            </Link>
+          ) : (
+            <Link to="/" className="reader__nav-link">
+              ← Volver al inicio
+            </Link>
+          )}
           <span className="reader__nav-current">
             Cap. {chapter.number} de 30
           </span>
-          <button className="reader__nav-link" disabled>
-            Cap. 2 →
-          </button>
+          {nextChapter ? (
+            <Link to={`/capitulo/${nextChapter}`} className="reader__nav-link">
+              Cap. siguiente →
+            </Link>
+          ) : (
+            <button className="reader__nav-link" disabled>
+              Cap. siguiente →
+            </button>
+          )}
         </nav>
       </article>
 

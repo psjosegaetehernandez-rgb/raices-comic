@@ -390,3 +390,51 @@
     width: 60mm !important;
   }
 }
+
+/* ============================================================
+   PORTADA EN MODO IMPRESION - SIN OVERLAY
+   Solo se aplica al generar el PDF
+   ============================================================ */
+
+@media print {
+  .reader__cover-overlay {
+    display: none !important;
+    background: none !important;
+  }
+
+  .reader__cover-content {
+    background: none !important;
+  }
+
+  .reader__chapter-number {
+    color: #2BA8B8 !important;
+    text-shadow: 
+      0 0 8px rgba(0,0,0,0.9),
+      0 0 4px rgba(0,0,0,1),
+      0 1px 2px rgba(0,0,0,1) !important;
+    font-weight: 900 !important;
+  }
+
+  .reader__title {
+    color: #FFFFFF !important;
+    text-shadow: 
+      0 0 12px rgba(0,0,0,0.95),
+      0 0 6px rgba(0,0,0,1),
+      0 2px 4px rgba(0,0,0,1) !important;
+  }
+
+  .reader__subtitle {
+    color: #FFFFFF !important;
+    text-shadow: 
+      0 0 10px rgba(0,0,0,0.95),
+      0 0 5px rgba(0,0,0,1),
+      0 2px 3px rgba(0,0,0,1) !important;
+  }
+
+  .reader__meta {
+    color: #FFFFFF !important;
+    text-shadow: 
+      0 0 8px rgba(0,0,0,0.9),
+      0 1px 2px rgba(0,0,0,1) !important;
+  }
+}
