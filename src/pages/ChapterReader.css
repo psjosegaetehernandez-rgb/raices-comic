@@ -174,3 +174,219 @@
     padding: 0 var(--space-md);
   }
 }
+
+
+/* ============================================================
+   ESTILOS DE IMPRESION (v3 - 2 imagenes por pagina)
+   ============================================================ */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  html,
+  body {
+    background: white !important;
+    overflow: visible !important;
+  }
+
+  /* Ocultar elementos interactivos */
+  .reader__progress,
+  .reader__nav,
+  .reader__download,
+  .comic-panel__decision-badge,
+  .comic-panel__resolved-badge,
+  .decision-modal {
+    display: none !important;
+  }
+
+  .reader {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ============================================
+     PORTADA: ocupa una pagina completa
+     ============================================ */
+  .reader__header {
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always;
+  }
+
+  .reader__cover {
+    aspect-ratio: auto !important;
+    max-height: none !important;
+    height: 275mm !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    page-break-after: always;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .reader__cover-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .reader__cover-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+  }
+
+  .reader__cover-content {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 20mm 15mm 25mm !important;
+  }
+
+  /* ============================================
+     PAGINAS: 2 paneles por pagina A4
+     ============================================ */
+  .reader__pages {
+    display: block !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Cada reader__page = media pagina A4 */
+  .reader__page {
+    display: block !important;
+    height: 137mm !important;
+    max-height: 137mm !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Despues de cada 2 paginas, salto de pagina forzado */
+  .reader__page:nth-child(2n) {
+    page-break-after: always !important;
+    border-bottom: none !important;
+  }
+
+  /* Si es numero impar y es la ultima, salto al final */
+  .reader__page:last-child {
+    page-break-after: auto !important;
+  }
+
+  /* ============================================
+     PANEL DENTRO DE CADA MEDIA PAGINA
+     ============================================ */
+  .comic-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 2mm 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    box-sizing: border-box !important;
+  }
+
+  .comic-panel:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .comic-panel__image-wrap {
+    flex: 1 1 auto !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f5efe0 !important;
+    overflow: hidden !important;
+    min-height: 0 !important;
+  }
+
+  .comic-panel__image {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .comic-panel__caption {
+    position: absolute !important;
+    top: 3mm !important;
+    left: 3mm !important;
+    font-size: 8px !important;
+    padding: 2px 6px !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .comic-panel__narration {
+    flex: 0 0 auto !important;
+    padding: 3mm 5mm !important;
+    background-color: #FAF6EA !important;
+    border-top: 1px solid #333 !important;
+  }
+
+  .comic-panel__narration p {
+    font-size: 10.5px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    color: #4A4238 !important;
+  }
+
+  .bubble {
+    max-width: 70% !important;
+  }
+
+  .bubble__text {
+    font-size: 11px !important;
+  }
+
+  .bubble__character {
+    font-size: 7px !important;
+  }
+
+  .narrative {
+    max-width: 60% !important;
+  }
+
+  .narrative p {
+    font-size: 9px !important;
+  }
+
+  /* ============================================
+     FOOTER AMPRO: pagina completa
+     ============================================ */
+  .ampro-footer {
+    page-break-before: always !important;
+    margin-top: 0 !important;
+    padding: 30mm 20mm !important;
+    min-height: 260mm !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .ampro-footer__inner {
+    max-width: 100% !important;
+  }
+
+  .ampro-footer__logo {
+    width: 60mm !important;
+  }
+}

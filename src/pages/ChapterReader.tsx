@@ -34,7 +34,6 @@ export function ChapterReader() {
 
   const handleDecisionOpen = (decisionId: string) => {
     if (resolvedDecision === decisionId) return;
-
     const decision = chapter?.decisions?.find((d) => d.id === decisionId);
     if (decision) setActiveDecision(decision);
   };
@@ -110,6 +109,19 @@ export function ChapterReader() {
               ))}
             </section>
           ))}
+        </div>
+
+        <div className="reader__download">
+          <p className="reader__download-text">
+            ¿Quieres guardar este capítulo o imprimirlo?
+          </p>
+          <a
+            href="/raices-capitulo-1.pdf"
+            download="Raices-Capitulo-1.pdf"
+            className="reader__download-btn"
+          >
+            📄 Descargar PDF
+          </a>
         </div>
 
         <nav className="reader__nav" aria-label="Navegación entre capítulos">

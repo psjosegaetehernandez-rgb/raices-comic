@@ -37,7 +37,6 @@ export function ComicPanel({ panel, onDecision, isDecisionResolved }: Props) {
           src={panel.image}
           alt={panel.imageAlt}
           className="comic-panel__image"
-          loading="lazy"
         />
 
         {panel.caption && (
