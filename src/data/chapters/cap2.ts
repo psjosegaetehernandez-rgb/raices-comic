@@ -26,7 +26,7 @@ export const capitulo2: Chapter = {
           imageAlt: 'Amanecer sobre las casas de madera del campamento en el cerro',
           caption: 'Campamento Renacer · 6:15 AM',
           narration:
-            'El campamento respira antes que la ciudad. A esta hora, el humo de las cocinas sube recto hacia el cielo. Tatiana ya está despierta.',
+            'El campamento respira antes que la ciudad. A esta hora, el humo de las cocinas sube recto hacia el cielo, porque no hay viento. Huele a lena, a pan tostado, a cafe aguado. Tatiana esta despierta desde las cinco. Como cada dia.',
         },
       ],
     },
@@ -39,19 +39,19 @@ export const capitulo2: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap2/02-tatiana-rostro.jpg',
-          imageAlt: 'Retrato de Tatiana, mujer colombiana de 38 años',
+          imageAlt: 'Retrato de Tatiana, mujer colombiana de 38 anos',
           narration:
-            'Tatiana tiene 38 años y dos hijos. Llegó hace catorce meses desde Cúcuta. Antes tenía una casa con patio; ahora tiene un cuarto de madera y lona.',
+            'Tatiana tiene treinta y ocho. Llego hace catorce meses desde Cucuta, con dos maletas y dos hijos. Antes tenia una casa con patio, matas de mango, una cocina de gas. Ahora tiene un cuarto de madera y lona azul. Pero tiene lo que importa: los hijos siguen aqui, con ella.',
         },
         {
           id: 'cap2-p2-panel2',
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap2/03-hijos-durmiendo.jpg',
-          imageAlt: 'Dos niños durmiendo juntos en una cama pequeña',
+          imageAlt: 'Dos ninos durmiendo juntos en una cama pequena',
           caption: 'Los hijos',
           narration:
-            'Sus hijos duermen uno junto al otro. En sueños, todavía caminan por las calles de su ciudad. Al despertar, aprenderán otra vez a estar aquí.',
+            'Los ninos duermen uno pegado al otro, como dos cachorros. En suenos, todavia caminan por las calles de su ciudad, van al colegio viejo, compran helados en la esquina. Manana, cuando despierten, van a tener que acordarse otra vez de donde estan.',
         },
       ],
     },
@@ -67,7 +67,7 @@ export const capitulo2: Chapter = {
           imageAlt: 'Calle de tierra del campamento entre casas de madera',
           caption: 'Calle principal · 7:00 AM',
           narration:
-            'La calle es de tierra. Cuando llueve, se vuelve barro. Cuando no llueve, se vuelve polvo. Pero es la calle donde viven todos los sueños que llegaron aquí.',
+            'La calle es de tierra. Cuando llueve, se vuelve un barrizal donde los zapatos se hunden hasta el tobillo. Cuando no llueve, se vuelve un polvo que se mete en la ropa, en el pelo, en los pulmones. Pero es la calle donde viven todos los suenos que llegaron hasta aca.',
         },
       ],
     },
@@ -84,14 +84,14 @@ export const capitulo2: Chapter = {
           dialogues: [
             {
               id: 'd2-1',
-              character: 'Doña Rosa',
-              text: 'Tatiana, hay reunión hoy. Quieren hablar de la luz.',
+              character: 'Dona Rosa',
+              text: 'Tatiana, hay reunion hoy. Quieren hablar de la luz. Vente, que tu palabra pesa.',
               position: 'top-left',
               style: 'speech',
             },
           ],
           narration:
-            'Doña Rosa lleva ocho años en el campamento. Sabe todos los nombres, todos los dolores, todas las historias. Es la memoria viva del lugar.',
+            'Dona Rosa lleva ocho anos en el campamento. Sabe todos los nombres, todos los dolores, todas las historias. Es la memoria viva del lugar. Cuando ella habla, los demas escuchan. Cuando ella invita, uno va.',
         },
       ],
     },
@@ -107,7 +107,7 @@ export const capitulo2: Chapter = {
           imageAlt: 'Vecinos reunidos en asamblea comunitaria al aire libre',
           caption: 'Asamblea · 11:00 AM',
           narration:
-            'En el campamento, las decisiones se toman en asamblea. Voces distintas, cansadas y firmes, buscan ponerse de acuerdo. No siempre lo logran, pero siempre vuelven a intentarlo.',
+            'La asamblea se hace en el patio de tierra, entre sillas plasticas de colores. Voces distintas, cansadas y firmes, buscan ponerse de acuerdo. No siempre lo logran. Pero siempre vuelven a intentarlo. Eso, quiza, es lo que significa comunidad: no el acuerdo, sino la insistencia.',
         },
       ],
     },
@@ -122,7 +122,7 @@ export const capitulo2: Chapter = {
           image: '/imagenes/cap2/07-tatiana-pensativa.jpg',
           imageAlt: 'Tatiana sentada sola, pensativa, mirando el horizonte',
           narration:
-            'Tatiana escucha. Hay quienes quieren organizarse para exigir al municipio. Hay quienes prefieren no moverse, por miedo a represalias. Ella entiende a los dos.',
+            'Tatiana escucha. Hay quienes quieren organizarse para exigir al municipio. Hay quienes prefieren no moverse, por miedo a represalias. Las dos cosas son razonables. Las dos cosas son humanas. Y ella, ahora, tiene que elegir donde poner el cuerpo.',
           decisionId: 'd2-1',
         },
       ],
@@ -137,9 +137,9 @@ export const capitulo2: Chapter = {
           layout: 'full',
           image: '/imagenes/cap2/08-ollas-comunes.jpg',
           imageAlt: 'Varias mujeres cocinando juntas en ollas grandes al fuego',
-          caption: 'Olla común · 12:30 PM',
+          caption: 'Olla comun · 12:30 PM',
           narration:
-            'El hambre se combate en comunidad. Cada semana, las mujeres del campamento cocinan juntas para todas las familias. Así, ninguna queda sola frente a la olla vacía.',
+            'La olla comun hierve desde el mediodia. Es la misma olla que Amaru vio la primera noche que llego al campamento. Lo poco que hay, se reparte: un plato para cada familia, sin importar cuantos trajeron. Asi se sobrevive cuando no hay nada. No con lo que se tiene. Con lo que se comparte.',
         },
       ],
     },
@@ -155,17 +155,17 @@ export const capitulo2: Chapter = {
           imageAlt: 'Manos de mujer cortando verduras sobre una mesa de madera',
           caption: 'El trabajo invisible',
           narration:
-            'Las manos que cocinan son las mismas que cuidan, que limpian, que sostienen. Un trabajo que nadie ve, que nadie paga, pero que hace posible todo lo demás.',
+            'Las manos que cocinan son las mismas que cuidan, que limpian, que sostienen. Un trabajo que nadie ve, que nadie paga, pero que hace posible todo lo demas. Si esas manos se detuvieran, el campamento se caeria en dos dias.',
         },
         {
           id: 'cap2-p8-panel2',
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap2/10-ninos-comiendo.jpg',
-          imageAlt: 'Niños recibiendo platos de comida con sonrisas',
+          imageAlt: 'Ninos recibiendo platos de comida con sonrisas',
           caption: 'Los que comen',
           narration:
-            'Los niños reciben sus platos sonriendo. No saben que sus madres a veces no comen para que ellos sí. Eso también es un modo de amar.',
+            'Los ninos reciben sus platos sonriendo. No saben que sus madres, muchas veces, no comen para que ellos si. No lo saben. No tienen por que saberlo todavia. Eso tambien es un modo de amar.',
         },
       ],
     },
@@ -181,7 +181,7 @@ export const capitulo2: Chapter = {
           imageAlt: 'Tatiana y sus hijos en la puerta de su casa al atardecer',
           caption: 'Al atardecer · 7:30 PM',
           narration:
-            'Al anochecer, Tatiana mira la ciudad desde el cerro. Las luces de Antofagasta brillan abajo, cerca y lejanas. Su casa ahora es esta. No la que dejó, sino la que está construyendo.',
+            'Al anochecer, Tatiana mira la ciudad desde el cerro. Las luces de Antofagasta brillan abajo, cerca y lejanas al mismo tiempo. Su casa ahora es esta: no la que dejo, sino la que esta construyendo con sus manos. Y quiza eso, tambien, sea un modo de volver a casa.',
           decisionId: 'd2-2',
         },
       ],
@@ -196,9 +196,9 @@ export const capitulo2: Chapter = {
           layout: 'full',
           image: '/imagenes/cap2/12-raices-nuevas.jpg',
           imageAlt: 'Ramas verdes brotando de troncos secos en el cerro',
-          caption: 'Epílogo',
+          caption: 'Epilogo',
           narration:
-            'En el campamento, la vida no se detiene. Brotan plantas entre el polvo, nacen niños entre las lonas, se tejen redes donde antes había nada. Raíces nuevas, en tierra nueva.',
+            'En el campamento, la vida no se detiene. Brotan plantas entre el polvo, nacen ninos entre las lonas, se tejen redes donde antes habia nada. Raices nuevas, en tierra nueva. Como la semilla de Amaru, enterrada en otro patio, a pocos metros de la casa de Tatiana.',
         },
       ],
     },
@@ -206,63 +206,63 @@ export const capitulo2: Chapter = {
   decisions: [
     {
       id: 'd2-1',
-      question: 'Tatiana debe decidir cómo participar en la asamblea',
-      context: 'Las familias están divididas entre organizarse y mantenerse en silencio.',
+      question: 'Tatiana debe decidir como participar en la asamblea',
+      context: 'Las familias estan divididas entre organizarse y mantenerse en silencio.',
       options: [
         {
           id: 'd2-1a',
           label: 'A',
-          text: 'Hablar a favor de la organización comunitaria',
+          text: 'Hablar a favor de la organizacion comunitaria',
           consequence:
-            'Tatiana alza la voz. Su palabra pesa. Las familias se animan a organizarse. Aprenden que la unión hace fuerza, aunque también atrae miradas incómodas.',
-          pedagogicalTag: 'Organización popular / tejido comunitario',
+            'Tatiana alza la voz. Su palabra pesa, porque viene de una mujer que ha sabido callar cuando era necesario. Las familias se animan a organizarse. Aprenden que la union hace fuerza, aunque tambien atrae miradas incomodas. Y esas miradas, a veces, son el precio.',
+          pedagogicalTag: 'Organizacion popular / tejido comunitario',
         },
         {
           id: 'd2-1b',
           label: 'B',
-          text: 'Escuchar en silencio y decidir después',
+          text: 'Escuchar en silencio y decidir despues',
           consequence:
-            'Tatiana no habla. Escucha. Aprende los nombres, los miedos, las esperanzas. A veces la primera tarea es comprender antes de actuar.',
+            'Tatiana no habla. Escucha. Aprende los nombres, los miedos, las esperanzas de cada familia. A veces la primera tarea es comprender antes de actuar. Y comprender, tambien, es una forma de actuar.',
           pedagogicalTag: 'Escucha activa / cuidado del ritmo',
         },
         {
           id: 'd2-1c',
           label: 'C',
-          text: 'Proponer una reunión aparte, solo entre mujeres',
+          text: 'Proponer una reunion aparte, solo entre mujeres',
           consequence:
-            'Tatiana propone un espacio propio. Las mujeres del campamento se reúnen por primera vez sin la mirada de los hombres. Hablan de lo que duele, de lo que sueñan, de lo que temen.',
+            'Tatiana propone un espacio propio. Las mujeres del campamento se reunen por primera vez sin la mirada de los hombres. Hablan de lo que duele, de lo que suenan, de lo que temen. Descubren que muchas veces piensan lo mismo sin saberlo.',
           pedagogicalTag: 'Feminismo comunitario / cuidado colectivo',
         },
       ],
     },
     {
       id: 'd2-2',
-      question: 'Tatiana decide cómo sostener el cuidado de sus hijos',
-      context: 'El trabajo, la escuela y la organización compiten por su tiempo.',
+      question: 'Tatiana decide como sostener el cuidado de sus hijos',
+      context: 'El trabajo, la escuela y la organizacion compiten por su tiempo.',
       options: [
         {
           id: 'd2-2a',
           label: 'A',
-          text: 'Pedir ayuda a las vecinas para cuidar a los niños',
+          text: 'Pedir ayuda a las vecinas para cuidar a los ninos',
           consequence:
-            'Tatiana aprende a confiar. Deja a sus hijos con Doña Rosa mientras trabaja. Descubre que el cuidado no es debilidad: es un pacto entre mujeres.',
+            'Tatiana aprende a confiar. Deja a sus hijos con Dona Rosa mientras trabaja. Descubre que el cuidado no es debilidad: es un pacto entre mujeres que saben lo que es criar en la intemperie.',
           pedagogicalTag: 'Redes de cuidado / sororidad',
         },
         {
           id: 'd2-2b',
           label: 'B',
-          text: 'Renunciar al trabajo para estar más tiempo con ellos',
+          text: 'Renunciar al trabajo para estar mas tiempo con ellos',
           consequence:
-            'Tatiana deja el trabajo. Está con sus hijos, pero la plata no alcanza. Descubre que el cuidado, sin red, es también un modo de soledad.',
-          pedagogicalTag: 'Tensión trabajo-cuidado',
+            'Tatiana deja el trabajo. Esta con sus hijos, los ve crecer, los acompana. Pero la plata no alcanza y la culpa empieza a ocupar el lugar que antes ocupaba el cansancio. Descubre que el cuidado, sin red, tambien puede ser un modo de soledad.',
+          pedagogicalTag: 'Tension trabajo-cuidado',
         },
         {
           id: 'd2-2c',
           label: 'C',
           text: 'Organizar un turno con otras madres del campamento',
           consequence:
-            'Tatiana propone un sistema rotativo de cuidado. Las madres se organizan. Los niños crecen acompañados. El cuidado deja de ser un problema individual.',
-          pedagogicalTag: 'Cuidado colectivo / economía feminista',
+            'Tatiana propone un sistema rotativo de cuidado. Las madres se organizan por dias y horarios. Los ninos crecen acompanados por otras madres, otras abuelas, otros ninos. El cuidado deja de ser un problema individual y se vuelve una responsabilidad comun.',
+          pedagogicalTag: 'Cuidado colectivo / economia feminista',
         },
       ],
     },
