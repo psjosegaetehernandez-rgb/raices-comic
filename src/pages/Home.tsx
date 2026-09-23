@@ -45,6 +45,18 @@ export function Home() {
               <span className="home__chapter-arrow">→</span>
             </Link>
           </li>
+          <li className="home__chapter-item">
+            <Link to="/capitulo/cap3" className="home__chapter-link">
+              <span className="home__chapter-num">03</span>
+              <div className="home__chapter-info">
+                <h3 className="home__chapter-title">Las Raíces Cruzan la Cordillera</h3>
+                <p className="home__chapter-meta">
+                  Killa · Entre Bolivia y Chile
+                </p>
+              </div>
+              <span className="home__chapter-arrow">→</span>
+            </Link>
+          </li>
         </ul>
       </section>
 

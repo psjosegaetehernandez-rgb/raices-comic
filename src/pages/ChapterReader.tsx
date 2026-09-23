@@ -5,12 +5,14 @@ import { DecisionModal } from '../components/DecisionModal';
 import { AMPROFooter } from '../components/AMPROFooter';
 import { capitulo1 } from '../data/chapters/cap1';
 import { capitulo2 } from '../data/chapters/cap2';
+import { capitulo3 } from '../data/chapters/cap3';
 import type { Chapter, Decision, DecisionOption } from '../data/types';
 import './ChapterReader.css';
 
 const CHAPTERS: Record<string, Chapter> = {
   cap1: capitulo1,
   cap2: capitulo2,
+  cap3: capitulo3,
 };
 
 export function ChapterReader() {
