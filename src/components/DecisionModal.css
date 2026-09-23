@@ -1,0 +1,208 @@
+.decision-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: var(--space-lg);
+  animation: decision-fade-in 0.3s ease;
+}
+
+@keyframes decision-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.decision-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(31, 27, 22, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.decision-modal__box {
+  position: relative;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--paper-light);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  padding: var(--space-xl) var(--space-lg);
+  animation: decision-slide-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes decision-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.decision-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--ink-faded);
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.decision-modal__close:hover {
+  background-color: var(--paper-dark);
+  color: var(--ink);
+}
+
+.decision-modal__eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ampro-turquoise);
+  margin-bottom: var(--space-sm);
+}
+
+.decision-modal__question {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: var(--space-md);
+}
+
+.decision-modal__context {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(31, 27, 22, 0.1);
+}
+
+.decision-modal__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.decision-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--paper-cream);
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--ink);
+}
+
+.decision-option:hover {
+  background-color: var(--ampro-turquoise-soft);
+  border-color: var(--ampro-turquoise);
+  transform: translateX(4px);
+}
+
+.decision-option__label {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--earth-terracotta);
+  min-width: 40px;
+  transition: color 0.2s;
+}
+
+.decision-option:hover .decision-option__label {
+  color: var(--ampro-turquoise-dark);
+}
+
+.decision-option__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.decision-modal__consequence-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-lg);
+}
+
+.decision-modal__tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--ampro-turquoise-soft);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ampro-turquoise-dark);
+  margin-bottom: var(--space-xl);
+}
+
+.decision-modal__actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: space-between;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(31, 27, 22, 0.1);
+}
+
+.decision-modal__btn-back,
+.decision-modal__btn-confirm {
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.decision-modal__btn-back {
+  background-color: transparent;
+  border: var(--border-thin);
+  color: var(--ink-soft);
+}
+
+.decision-modal__btn-back:hover {
+  background-color: var(--paper-dark);
+  color: var(--ink);
+}
+
+.decision-modal__btn-confirm {
+  background-color: var(--ink);
+  border: none;
+  color: var(--paper-cream);
+}
+
+.decision-modal__btn-confirm:hover {
+  background-color: var(--ampro-turquoise);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-ampro);
+}

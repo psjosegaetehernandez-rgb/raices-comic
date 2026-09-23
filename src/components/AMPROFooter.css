@@ -1,0 +1,93 @@
+.ampro-footer {
+  margin-top: var(--space-2xl);
+  padding: var(--space-2xl) var(--space-lg);
+  background-color: var(--sky-deep);
+  color: var(--paper-cream);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ampro-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--ampro-orange) 0%,
+    var(--ampro-yellow) 33%,
+    var(--ampro-blue) 66%,
+    var(--ampro-green) 100%
+  );
+}
+
+.ampro-footer__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ampro-footer__logo {
+  width: 180px;
+  height: auto;
+  margin: 0 auto var(--space-lg);
+  display: block;
+  background-color: var(--paper-cream);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.ampro-footer__dedication {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: var(--space-md);
+}
+
+.ampro-footer__org {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--space-md);
+}
+
+.ampro-footer__org strong {
+  color: var(--ampro-turquoise);
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+
+.ampro-footer__message {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: var(--space-xl);
+}
+
+.ampro-footer__divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--ampro-turquoise);
+  margin: 0 auto var(--space-lg);
+  opacity: 0.5;
+}
+
+.ampro-footer__license {
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+.ampro-footer__license a {
+  color: var(--ampro-turquoise);
+  border-bottom-color: transparent;
+}
+
+.ampro-footer__license a:hover {
+  border-bottom-color: var(--ampro-turquoise);
+}
