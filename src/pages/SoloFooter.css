@@ -1,0 +1,28 @@
+.solo-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.solo-footer .ampro-footer {
+  width: 100%;
+  margin-top: 0;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .solo-footer {
+    min-height: 100vh;
+    page-break-after: always;
+  }
+}
