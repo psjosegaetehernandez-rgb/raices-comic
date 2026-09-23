@@ -7,6 +7,7 @@ import { capitulo1 } from '../data/chapters/cap1';
 import { capitulo2 } from '../data/chapters/cap2';
 import { capitulo3 } from '../data/chapters/cap3';
 import { capitulo4 } from '../data/chapters/cap4';
+import { capitulo5 } from '../data/chapters/cap5';
 import type { Chapter, Decision, DecisionOption } from '../data/types';
 import './ChapterReader.css';
 
@@ -15,6 +16,7 @@ const CHAPTERS: Record<string, Chapter> = {
   cap2: capitulo2,
   cap3: capitulo3,
   cap4: capitulo4,
+  cap5: capitulo5,
 };
 
 export function ChapterReader() {

@@ -469,3 +469,59 @@
     display: none !important;
   }
 }
+/* ============================================================
+   FIX v2: portadas con texto completo (sin cortes)
+   ============================================================ */
+
+@media print {
+  .reader__cover-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20mm 8mm 25mm !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .reader__chapter-number {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 6px !important;
+    font-size: 10px !important;
+  }
+
+  .reader__title {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .reader__subtitle {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .reader__meta {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    font-size: 9px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.04em !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    padding: 0 6mm !important;
+    box-sizing: border-box !important;
+  }
+}
