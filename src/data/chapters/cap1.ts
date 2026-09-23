@@ -26,7 +26,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Cordillera de los Andes vista desde el altiplano al amanecer',
           caption: 'Altiplano andino · 4:00 AM',
           narration:
-            'La cordillera respira. Bajo el cielo más limpio del mundo, el frío corta la piel y el silencio pesa.',
+            'La cordillera respira como un animal antiguo. Bajo este cielo, el mas limpio del mundo, no hay ruido humano. Solo el viento. Solo el frio que se mete por las mangas, por el cuello, por los tobillos. Solo el silencio, que tambien pesa.',
         },
       ],
     },
@@ -42,7 +42,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Paso fronterizo Visviri al amanecer',
           caption: 'Paso Visviri · 4:30 AM',
           narration:
-            'A lo lejos, las luces de un retén. La frontera no es una línea: es una herida que se abre y se cierra todos los días.',
+            'A lo lejos, cuatro luces amarillas. Un reten. Amaru las mira sin pestanear. Su abuela le dijo una vez que la frontera no es una linea: es una herida que se abre y se cierra todos los dias. Y el, ahora, la esta cruzando.',
         },
       ],
     },
@@ -56,9 +56,9 @@ export const capitulo1: Chapter = {
           layout: 'full',
           image: '/imagenes/cap1/01-frontera-noche.jpg',
           imageAlt: 'Puesto fronterizo militar nocturno en los Andes',
-          caption: 'Retén militar · 4:45 AM',
+          caption: 'Reten militar · 4:45 AM',
           narration:
-            'Amaru ajusta su manta y respira hondo. Sabe que a partir de aquí, cada paso cuenta.',
+            'Amaru ajusta la manta sobre los hombros. Respira hondo. En el bolsillo derecho, los dedos tocan la semilla. Esta ahi. Sigue ahi. A partir de este momento, cada paso cuenta.',
         },
       ],
     },
@@ -71,12 +71,12 @@ export const capitulo1: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap1/02-amaru-rostro.jpg',
-          imageAlt: 'Retrato de Amaru, joven aymara de 24 años',
+          imageAlt: 'Retrato de Amaru, joven aymara de 24 anos',
           narration:
-            'Amaru lleva en el bolsillo una semilla de quinoa. Su abuela se la dio antes de partir.',
+            'En el bolsillo derecho, envuelta en un pedazo de tela, la semilla de quinoa. Su abuela se la puso en la mano la ultima manana, sin explicaciones. Solo dijo: "Donde la plantes, echaras raices".',
           narrativeBoxes: [
             {
-              text: 'Donde la plantes, echarás raíces.',
+              text: 'Donde la plantes, echaras raices.',
               position: 'bottom-left',
               style: 'quote',
             },
@@ -90,7 +90,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Semilla dorada de quinoa brotando entre grietas',
           caption: 'La semilla',
           narration:
-            'Una semilla dorada. Pequeña. Imposible de romper. Como la memoria de los suyos.',
+            'Es pequena. Dorada. Podria perderse entre los dedos sin dejar rastro. Pero pesa. Pesa como el lago Titicaca, como el patio de la casa, como los ojos de su abuela la ultima vez que lo vio.',
         },
       ],
     },
@@ -103,9 +103,9 @@ export const capitulo1: Chapter = {
           type: 'dialogue',
           layout: 'full',
           image: '/imagenes/cap1/03-coyote.jpg',
-          imageAlt: 'Hombre de 45 años con sombrero, mirada calculadora',
+          imageAlt: 'Hombre de 45 anos con sombrero, mirada calculadora',
           narration:
-            'El desconocido le ofreció ayuda: "¿Buscas cruzar? Yo te ayudo. Tiene un costo." Su voz era aceitosa; sus ojos, calculadores.',
+            'El hombre lo mira sin apuro. Sonrie con el cigarro entre los dientes. "Buscas cruzar? Yo te ayudo. Tiene un costo." Su voz es aceitosa, de esas que se pegan. Sus ojos no sonrien.',
         },
       ],
     },
@@ -120,7 +120,7 @@ export const capitulo1: Chapter = {
           image: '/imagenes/cap1/04-amaru-solo.jpg',
           imageAlt: 'Amaru caminando solo en el desierto',
           narration:
-            'Amaru piensa. Hay caminos que se pagan con dinero y caminos que se pagan con miedo. Ninguno es gratis.',
+            'Amaru piensa. Hay caminos que se pagan con dinero y caminos que se pagan con miedo. Y hay caminos, los mas raros, que se pagan con paciencia. Ninguno es gratis. Todos dejan marca.',
           decisionId: 'd1',
         },
       ],
@@ -134,10 +134,10 @@ export const capitulo1: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap1/05-grupo-migrantes.jpg',
-          imageAlt: 'Grupo de 6 familias migrantes alrededor de una olla común',
+          imageAlt: 'Grupo de 6 familias migrantes alrededor de una olla comun',
           caption: 'Camino a Chile · 6:45 AM',
           narration:
-            'Un grupo de familias avanza en silencio. Comparten agua, pan y silencios. La comunidad, a veces, es lo único que se tiene.',
+            'Un grupo de familias camina sin hablar. Una mujer le pasa la botella de agua a un viejo. Un nino comparte el pan con otro. Nadie dice nada. La comunidad, a veces, es esto: un gesto, una botella, un pan partido en dos.',
         },
       ],
     },
@@ -152,7 +152,7 @@ export const capitulo1: Chapter = {
           image: '/imagenes/cap1/11-manos.jpg',
           imageAlt: 'Manos oscuras entrelazadas con cadenas rotas',
           narration:
-            'Las manos se entrelazan. Nadie lo dice, pero todos lo saben: quien camina solo, camina más rápido; quien camina acompañado, llega más lejos.',
+            'Las manos se entrelazan. Son manos que no se conocen, manos que quiza no se vuelvan a ver. Pero ahora, en este paso, son las unicas manos disponibles. Quien camina solo llega mas rapido. Quien camina acompanado, llega mas lejos.',
         },
       ],
     },
@@ -165,10 +165,10 @@ export const capitulo1: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap1/09-olla-comun.jpg',
-          imageAlt: 'Olla común en patio compartido del campamento',
-          caption: 'Olla común · 11:30 AM',
+          imageAlt: 'Olla comun en patio compartido del campamento',
+          caption: 'Olla comun · 11:30 AM',
           narration:
-            'En el campamento, la olla común hierve. Lo poco que hay, se reparte. Así se sobrevive: no con lo que se tiene, sino con lo que se comparte.',
+            'La olla comun hierve desde temprano. Lo poco que hay, se reparte: un plato para cada familia, sin importar cuantos trajeron. Asi se sobrevive cuando no hay nada. No con lo que se tiene. Con lo que se comparte.',
         },
       ],
     },
@@ -184,7 +184,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Llegada a Alto Hospicio al atardecer',
           caption: 'Alto Hospicio · 7:45 PM',
           narration:
-            'El atardecer pinta la ciudad de naranja y polvo. Alto Hospicio: miles de casas de madera colgadas del cerro. Aquí empieza otra vida.',
+            'El atardecer pinta el cerro de naranja y polvo. Alto Hospicio: miles de casas de madera, todas colgadas de la misma ladera, todas con las mismas lonas azules en el techo. Aqui empieza otra vida. Aqui, tambien, empieza el olvido.',
         },
       ],
     },
@@ -197,10 +197,10 @@ export const capitulo1: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap1/06-campamento.jpg',
-          imageAlt: 'Vista panorámica de Alto Hospicio al atardecer',
+          imageAlt: 'Vista panoramica de Alto Hospicio al atardecer',
           caption: 'Campamento Renacer · 8:00 PM',
           narration:
-            'El campamento huele a tierra mojada y a comida compartida. Amaru deja su mochila. Este es, por ahora, su hogar.',
+            'El campamento huele a tierra mojada, a lena humeda, a comida que no alcanza pero se comparte. Amaru deja la mochila en el suelo de tierra. Este es, por ahora, su hogar. Manana veremos.',
         },
       ],
     },
@@ -213,10 +213,10 @@ export const capitulo1: Chapter = {
           type: 'reflection',
           layout: 'full',
           image: '/imagenes/cap1/15-raices.jpg',
-          imageAlt: 'Raíces de árbol entrelazadas bajo tierra',
-          caption: 'Epílogo',
+          imageAlt: 'Raices de arbol entrelazadas bajo tierra',
+          caption: 'Epilogo',
           narration:
-            'Esa noche, Amaru planta la semilla en un rincón del patio. No sabe si germinará. Pero sabe que las raíces, cuando encuentran tierra, siempre encuentran la forma.',
+            'Esa noche, cuando todos duermen, Amaru cava un hueco con las manos en un rincon del patio. Deposita la semilla. La cubre con tierra mojada. No sabe si germinara —el desierto no perdona—. Pero sabe que las raices, cuando encuentran tierra, siempre encuentran la forma.',
         },
       ],
     },
@@ -224,7 +224,7 @@ export const capitulo1: Chapter = {
   decisions: [
     {
       id: 'd1',
-      question: '¿Qué camino toma Amaru?',
+      question: 'Que camino toma Amaru?',
       context: 'La frontera se abre en tres direcciones. Ninguna es segura.',
       options: [
         {
@@ -232,24 +232,24 @@ export const capitulo1: Chapter = {
           label: 'A',
           text: 'Aceptar la ayuda del desconocido',
           consequence:
-            'El coyote lo lleva por un paso peligroso. Amaru llega, pero endeudado y con miedo. Aprende que hay favores que hipotecan la libertad.',
-          pedagogicalTag: 'Tráfico ilícito / deuda',
+            'El coyote lo lleva por un paso peligroso. Amaru llega, pero endeudado y con miedo. Aprende que hay favores que hipotecan la libertad. Y que el miedo, a diferencia de la deuda, no se paga con dinero.',
+          pedagogicalTag: 'Trafico ilicito / deuda',
         },
         {
           id: 'd1b',
           label: 'B',
           text: 'Rechazar y buscar otra ruta',
           consequence:
-            'Amaru camina solo durante horas. Encuentra un camino alternativo, pero llega exhausto. Descubre que la autonomía tiene un costo físico.',
-          pedagogicalTag: 'Autonomía migrante',
+            'Amaru camina solo durante horas. Encuentra un camino alternativo, pero llega exhausto. Descubre que la autonomia tiene un costo fisico. Y que a veces, caminar solo es la unica forma de seguir siendo uno mismo.',
+          pedagogicalTag: 'Autonomia migrante',
         },
         {
           id: 'd1c',
           label: 'C',
           text: 'Unirse a otros migrantes',
           consequence:
-            'Un grupo de familias lo invita a caminar juntos. Comparten agua, pan y silencios. Amaru entiende que la comunidad es también un modo de cruzar.',
-          pedagogicalTag: 'Malungaje / comunidad en tránsito',
+            'Un grupo de familias lo invita a caminar juntos. Comparten agua, pan y silencios. Amaru entiende que la comunidad es tambien un modo de cruzar. Y que las manos prestadas, a veces, sostienen mas que las propias.',
+          pedagogicalTag: 'Malungaje / comunidad en transito',
         },
       ],
     },
