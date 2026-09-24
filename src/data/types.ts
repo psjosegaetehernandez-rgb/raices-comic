@@ -31,7 +31,8 @@ export interface Dialogue {
   text: string;
   position: BubblePosition;
   style?: BubbleStyle;
-}
+
+  className?: string;}
 
 export interface NarrativeBox {
   text: string;
