@@ -137,7 +137,7 @@ export function ChapterReader() {
             </Link>
           )}
           <span className="reader__nav-current">
-            Cap. {chapter.number} de 30
+            Cap. {chapter.number} de 5
           </span>
           {nextChapter ? (
             <Link to={`/capitulo/${nextChapter}`} className="reader__nav-link">
