@@ -1,0 +1,225 @@
+// scripts/fix-accents.cjs - Versión expandida v2
+const fs   = require('fs');
+const path = require('path');
+
+const DRY          = process.argv.includes('--dry');
+const CHAPTERS_DIR = path.join(__dirname, '..', 'src', 'data', 'chapters');
+
+// ============ DICCIONARIO AMPLIADO ============
+const DICT = {
+  // --- Genéricos sin tilde ---
+  'anos':'años','ano':'año','despues':'después','tambien':'también',
+  'mama':'mamá','papa':'papá','dia':'día','dias':'días','manana':'mañana',
+  'pais':'país','paises':'países',
+  'publico':'público','publica':'pública','publicos':'públicos','publicas':'públicas','publicamente':'públicamente',
+  'titulo':'título','titulos':'títulos','tramite':'trámite','tramites':'trámites',
+  'extranjeria':'extranjería',
+  'companero':'compañero','companera':'compañera','companeros':'compañeros','companeras':'compañeras',
+  'nino':'niño','nina':'niña','ninos':'niños','ninas':'niñas',
+  'pequeno':'pequeño','pequena':'pequeña','pequenos':'pequeños','pequenas':'pequeñas',
+  'enseno':'enseñó','ensenar':'enseñar','ensenanza':'enseñanza',
+  'habia':'había','habian':'habían','habra':'habrá','habran':'habrán',
+  'haria':'haría','harian':'harían','seria':'sería','serian':'serían',
+  'tendria':'tendría','tendrian':'tendrían','podria':'podría','podrian':'podrían',
+  'queria':'quería','querian':'querían','sabia':'sabía','sabian':'sabían',
+  'decia':'decía','decian':'decían','venia':'venía','venian':'venían',
+  'tenia':'tenía','tenian':'tenían','vivia':'vivía','vivian':'vivían',
+  'escribia':'escribía','escribian':'escribían','aprendia':'aprendía','aprendian':'aprendían',
+  'comia':'comía','comian':'comían',
+  'veintiseis':'veintiséis','veintidos':'veintidós','veintitres':'veintitrés',
+  'raices':'raíces','raiz':'raíz',
+  'migracion':'migración','migraciones':'migraciones',
+  'decision':'decisión','decisiones':'decisiones',
+  'corazon':'corazón','corazones':'corazones',
+  'informacion':'información','educacion':'educación',
+  'situacion':'situación','condicion':'condición','condiciones':'condiciones',
+  'nacion':'nación','naciones':'naciones','region':'región','regiones':'regiones',
+  'cancion':'canción','canciones':'canciones',
+  'japones':'japonés','japonesa':'japonesa',
+  'frances':'francés','francesa':'francesa',
+  'ingles':'inglés','inglesa':'inglesa',
+  'aleman':'alemán','alemana':'alemana',
+  'ultimo':'último','ultima':'última','ultimos':'últimos','ultimas':'últimas',
+  'proximo':'próximo','proxima':'próxima','proximos':'próximos','proximas':'próximas',
+  'numero':'número','numeros':'números',
+  'capitulo':'capítulo','capitulos':'capítulos',
+  'practica':'práctica','practicas':'prácticas','practico':'práctico','practicos':'prácticos',
+  'medico':'médico','medica':'médica','medicos':'médicos','medicas':'médicas',
+  'basico':'básico','basica':'básica','basicos':'básicos','basicas':'básicas',
+  'logico':'lógico','logica':'lógica','logicos':'lógicos','logicas':'lógicas',
+  'fisico':'físico','fisica':'física','fisicos':'físicos','fisicas':'físicas',
+  'teorico':'teórico','teorica':'teórica','teoricos':'teóricos','teoricas':'teóricas',
+  'rapido':'rápido','rapida':'rápida','rapidos':'rápidos','rapidas':'rápidas',
+  'arbol':'árbol','arboles':'árboles',
+  'azucar':'azúcar','lapiz':'lápiz','lapices':'lápices',
+  'carcel':'cárcel','carceles':'cárceles',
+  'facil':'fácil','faciles':'fáciles','dificil':'difícil','dificiles':'difíciles',
+  'util':'útil','utiles':'útiles','debil':'débil','debiles':'débiles',
+  'movil':'móvil','moviles':'móviles',
+  'caracter':'carácter','caracteres':'caracteres',
+  'regimen':'régimen','regimenes':'regímenes',
+  'estegosaurio':'estegosaurio',
+
+  // ============ NUEVAS ADICIONES (v2) ============
+  // Palabras con ñ
+  'pestanear':'pestañear','pestanea':'pestañea','pestaneando':'pestañeando',
+  'suenos':'sueños','sueno':'sueño','suena':'suena',
+  'engano':'engaño','enganos':'engaños','enganar':'engañar',
+  'manana':'mañana','mananas':'mañanas',
+  'Dona Rosa':'Doña Rosa','dona Rosa':'doña Rosa',
+  'pequenito':'pequeñito','pequenita':'pequeñita',
+  'carino':'cariño','carinos':'cariños','carinoso':'cariñoso','carinosa':'cariñosa',
+  'espanol':'español','espanola':'española',
+  'montana':'montaña','montanas':'montañas',
+  'banar':'bañar','bano':'baño','banos':'baños',
+  'extranar':'extrañar','extrano':'extraño','extrana':'extraña',
+  'senor':'señor','senora':'señora','senorita':'señorita','senores':'señores',
+  'ninos':'niños','ninas':'niñas',
+  'punio':'puño','punios':'puños',
+  'suenio':'sueño',
+
+  // Palabras con tilde nuevas
+  'reunion':'reunión','reuniones':'reuniones',
+  'telefono':'teléfono','telefonos':'teléfonos',
+  'humedo':'húmedo','humeda':'húmeda','humedos':'húmedos','humedas':'húmedas',
+  'meson':'mesón','mesones':'mesones',
+  'detras':'detrás',
+  'delante':'delante','adelante':'adelante',
+  'todavia':'todavía',
+  'Podria':'Podría','Podrian':'Podrían',
+  'Sonrie':'Sonríe','Sonrien':'Sonríen',
+  'mas':'más',
+  'plastico':'plástico','plastica':'plástica','plasticos':'plásticos','plasticas':'plásticas',
+  'logistica':'logística',
+  'certamen':'certamen','certamenes':'certámenes',
+  'volumen':'volumen','volumenes':'volúmenes',
+  'reumen':'resumen',
+  'Cucuta':'Cúcuta',
+  'Bolivar':'Bolívar','Bogota':'Bogotá','Panama':'Panamá','Canada':'Canadá',
+  'Mexico':'México','Peru':'Perú','Haiti':'Haití','Tarapaca':'Tarapacá',
+  'Iran':'Irán','Irak':'Irak',
+  'Arica':'Arica','Iquique':'Iquique',
+  'caribe':'caribe',
+
+  // Adjetivos comunes con tilde
+  'frio':'frío','fria':'fría','frios':'fríos','frias':'frías',
+  'vacio':'vacío','vacia':'vacía','vacios':'vacíos','vacias':'vacías',
+  'tio':'tío','tia':'tía','tios':'tíos','tias':'tías',
+  'mia':'mía','mio':'mío','mias':'mías','mios':'míos',
+  'tuya':'tuya','tuyo':'tuyo',
+  'pua':'púa','puas':'púas',
+  'sabia':'sabía',
+
+  // Verbos comunes
+  'oir':'oír','oia':'oía','oian':'oían',
+  'reir':'reír','reia':'reía','reian':'reían',
+  'sonreir':'sonreír',
+  'caer':'caer','caia':'caía','caian':'caían',
+  'traer':'traer','traia':'traía','traian':'traían',
+  'creer':'creer','creia':'creía','creian':'creían',
+  'leer':'leer','leia':'leía','leian':'leían',
+  'construir':'construir','construia':'construía',
+  'incluir':'incluir','incluia':'incluía',
+
+  // Posesivos y demostrativos
+  'aquel':'aquel','aquella':'aquella','aquellos':'aquellos','aquellas':'aquellas',
+
+  // Otros
+  'balcon':'balcón','balcones':'balcones',
+  'limon':'limón','limones':'limones',
+  'jabon':'jabón','jabones':'jabones',
+  'boton':'botón','botones':'botones',
+  'raton':'ratón','ratones':'ratones',
+  'camion':'camión','camiones':'camiones',
+  'avion':'avión','aviones':'aviones',
+  'cancion':'canción','canciones':'canciones',
+  'razon':'razón','razones':'razones',
+  'estacion':'estación','estaciones':'estaciones',
+  'leccion':'lección','lecciones':'lecciones',
+  'coleccion':'colección','colecciones':'colecciones',
+  'direccion':'dirección','direcciones':'direcciones',
+  'seccion':'sección','secciones':'secciones',
+  'accion':'acción','acciones':'acciones',
+  'reaccion':'reacción','reacciones':'reacciones',
+  'construccion':'construcción','construcciones':'construcciones',
+  'produccion':'producción','producciones':'producciones',
+  'introduccion':'introducción','introducciones':'introducciones',
+  'instruccion':'instrucción','instrucciones':'instrucciones',
+  'segun':'según','jamas':'jamás','ademas':'además',
+  'aqui':'aquí','alli':'allí','alla':'allá','asi':'así',
+
+  // Registro ampliado del capítulo
+  'alrededor':'alrededor','alrededores':'alrededores',
+  'caracter':'carácter',
+  'joven':'joven','jovenes':'jóvenes',
+  'rey':'rey','reyes':'reyes',
+  'ley':'ley','leyes':'leyes',
+  'mes':'mes','meses':'meses',
+  'mar':'mar','mares':'mares',
+  'pais':'país','paises':'países',
+};
+
+// Palabras AMBIGUAS — NO se tocan, solo se reportan
+const AMBIGUOUS = ['que','como','donde','cuando','quien','cual','cuales',
+                   'aun','esta','estan','hacia','solo','el','tu','mi','se','si','de','mas','papa'];
+
+const esc    = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const reWord = w => new RegExp(`(?<![\\p{L}\\p{N}_])${esc(w)}(?![\\p{L}\\p{N}_])`, 'gu');
+
+function processFile(file) {
+  const full = path.join(CHAPTERS_DIR, file);
+  const src  = fs.readFileSync(full, 'utf8');
+  let out    = src;
+  const applied = [];
+  const flagged = [];
+
+  for (const [from, to] of Object.entries(DICT)) {
+    if (from === to) continue;
+    const re = reWord(from);
+    if (re.test(out)) {
+      out = out.replace(re, to);
+      applied.push(`${from} → ${to}`);
+    }
+  }
+
+  const lines = out.split(/\r?\n/);
+  lines.forEach((line, i) => {
+    for (const w of AMBIGUOUS) {
+      if (reWord(w).test(line)) {
+        flagged.push(`L${i + 1}: [${w}]  ${line.trim().slice(0, 90)}`);
+        break;
+      }
+    }
+  });
+
+  return { full, out, applied, flagged };
+}
+
+(function main() {
+  const files = fs.readdirSync(CHAPTERS_DIR).filter(f => /^cap\d+\.ts$/.test(f)).sort();
+  let totalApplied = 0, totalFlagged = 0;
+
+  for (const f of files) {
+    const { full, out, applied, flagged } = processFile(f);
+    console.log(`\n════ ${f} ════`);
+    if (applied.length) {
+      console.log(`  ✅ Correcciones (${applied.length}):`);
+      applied.forEach(a => console.log(`     · ${a}`));
+      totalApplied += applied.length;
+      if (!DRY) fs.writeFileSync(full, out, 'utf8');
+    } else {
+      console.log('  ✅ Sin correcciones pendientes.');
+    }
+    if (flagged.length) {
+      console.log(`  ⚠️  Ambigüedades (${flagged.length}) — revisar manualmente:`);
+      flagged.slice(0, 8).forEach(x => console.log(`     · ${x}`));
+      if (flagged.length > 8) console.log(`     … (+${flagged.length - 8})`);
+      totalFlagged += flagged.length;
+    }
+  }
+
+  console.log(`\n──── RESUMEN ${DRY ? '(DRY RUN)' : ''} ────`);
+  console.log(`Correcciones aplicadas : ${totalApplied}`);
+  console.log(`Ambigüedades a revisar : ${totalFlagged}`);
+  if (DRY) console.log('👉 Ejecuta sin --dry para aplicar.');
+})();

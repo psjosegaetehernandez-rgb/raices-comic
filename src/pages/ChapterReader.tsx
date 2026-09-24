@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ComicPanel } from '../components/ComicPanel';
 import { DecisionModal } from '../components/DecisionModal';
 import { AMPROFooter } from '../components/AMPROFooter';
+import { DownloadPdfButton } from '../components/DownloadPdfButton';
 import { capitulo1 } from '../data/chapters/cap1';
 import { capitulo2 } from '../data/chapters/cap2';
 import { capitulo3 } from '../data/chapters/cap3';
@@ -125,21 +126,7 @@ export function ChapterReader() {
             </section>
           ))}
         </div>
-
-        <div className="reader__download">
-          <p className="reader__download-text">
-            Quieres guardar el comic completo (4 capitulos) o imprimirlo?
-          </p>
-          <a
-            href="/raices-comic-completo.pdf"
-            download="Raices-Comic-Completo.pdf"
-            className="reader__download-btn"
-          >
-            Descargar PDF
-          </a>
-        </div>
-
-        <nav className="reader__nav" aria-label="Navegacion entre capitulos">
+<nav className="reader__nav" aria-label="Navegacion entre capitulos">
           {prevChapter ? (
             <Link to={`/capitulo/${prevChapter}`} className="reader__nav-link">
               ← Cap. anterior
@@ -172,6 +159,7 @@ export function ChapterReader() {
         />
       )}
 
+      <DownloadPdfButton />
       <AMPROFooter />
     </>
   );

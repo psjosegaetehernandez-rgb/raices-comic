@@ -1,0 +1,130 @@
+.comic-panel {
+  margin-bottom: var(--space-lg);
+  background-color: var(--paper-light);
+  border: var(--border-thick);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.comic-panel:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 rgba(31, 27, 22, 0.18);
+}
+
+.comic-panel--decision {
+  border-color: var(--ampro-turquoise);
+  cursor: pointer;
+}
+
+.comic-panel--decision:hover {
+  box-shadow: 6px 6px 0 rgba(43, 168, 184, 0.35);
+  transform: translate(-2px, -2px);
+}
+
+.comic-panel--resolved {
+  border-color: var(--olive);
+}
+
+.comic-panel__image-wrap {
+  position: relative;
+  background-color: var(--paper-dark);
+}
+
+.comic-panel__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.comic-panel__caption {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  padding: 6px 12px;
+  background-color: var(--paper-cream);
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+}
+
+.comic-panel__decision-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 20px;
+  background-color: var(--ampro-turquoise);
+  color: var(--paper-cream);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(43, 168, 184, 0.4);
+  animation: decision-pulse 2s ease-in-out infinite;
+}
+
+@keyframes decision-pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 8px 24px rgba(43, 168, 184, 0.4);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.04);
+    box-shadow: 0 12px 32px rgba(43, 168, 184, 0.55);
+  }
+}
+
+.comic-panel__decision-icon {
+  font-size: 10px;
+}
+
+.comic-panel__resolved-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 12px;
+  background-color: var(--olive);
+  color: var(--paper-cream);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-soft);
+}
+
+.comic-panel__narration {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--paper-light);
+  border-top: var(--border-thin);
+}
+
+.comic-panel__narration p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.comic-panel--full {
+  width: 100%;
+}

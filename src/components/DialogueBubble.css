@@ -1,7 +1,7 @@
 .bubble {
   position: absolute;
-  max-width: 65%;
-  padding: var(--space-md) var(--space-lg);
+  max-width: 42%;
+  padding: var(--space-sm) var(--space-md);
   background-color: var(--paper-cream);
   border: var(--border-thick);
   border-radius: var(--radius-md);
@@ -12,7 +12,7 @@
 .bubble__character {
   display: block;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -22,8 +22,9 @@
 
 .bubble__text {
   font-family: var(--font-hand);
-  font-size: 19px;
-  line-height: 1.3;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
   color: var(--ink);
 }
 
@@ -78,3 +79,32 @@
 
 .bubble--top-left .bubble__tail  { left: 30px; }
 .bubble--top-right .bubble__tail { right: 30px; }
+
+/* ============================================================
+   Variantes de ancho de burbuja (agregado 17C)
+   ============================================================ */
+.bubble--narrow   { max-width: 32%; }
+.bubble--wide     { max-width: 60%; }
+.bubble--square   { max-width: 36%; aspect-ratio: auto; }
+
+/* ============================================================
+   Variante corner-right (agregado 17E)
+   Empuja la burbuja al borde derecho y la hace más compacta.
+   ============================================================ */
+.bubble--corner-right {
+  max-width: 30%;
+  padding: 10px 14px;
+}
+.bubble--corner-right.bubble--top-right    { top: 12px; right: 12px; }
+.bubble--corner-right.bubble--bottom-right { bottom: 12px; right: 12px; }
+
+/* ============================================================
+   Variante corner-left (agregado 18B)
+   Burbuja cuadrada pegada al borde izquierdo.
+   ============================================================ */
+.bubble--corner-left {
+  max-width: 30%;
+  padding: 10px 14px;
+}
+.bubble--corner-left.bubble--top-left    { top: 12px; left: 12px; }
+.bubble--corner-left.bubble--bottom-left { bottom: 12px; left: 12px; }

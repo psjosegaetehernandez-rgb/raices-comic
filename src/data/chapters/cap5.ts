@@ -4,9 +4,9 @@ export const capitulo5: Chapter = {
   id: 'cap5',
   number: 5,
   title: 'La Escuela del Silencio',
-  subtitle: 'Alto Hospicio · Escuela Publica',
+  subtitle: 'Alto Hospicio · Escuela Pública',
   protagonist: 'Daniel',
-  location: 'Escuela publica, Alto Hospicio',
+  location: 'Escuela pública, Alto Hospicio',
   theme: 'Educacion e infancia migrante',
   estimatedMinutes: 16,
   visual: {
@@ -23,10 +23,10 @@ export const capitulo5: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap5/01-escuela-exterior.jpg',
-          imageAlt: 'Escuela publica de dos pisos con patio de tierra y ninos entrando',
+          imageAlt: 'Escuela pública de dos pisos con patio de tierra y niños entrando',
           caption: 'Escuela Republica de Chile · 7:45 AM',
           narration:
-            'La escuela huele a tiza, a cuaderno nuevo, a jugo de fruta derramado. Daniel aprieta la mano de su mama como si fuera un salvavidas. Es su primer dia. La mochila es nueva, roja, con un estegosaurio bordado. Los zapatos, en cambio, tienen todavia el polvo del camino. El polvo que trajeron desde Maracaibo.',
+            'La escuela huele a tiza, a cuaderno nuevo, a jugo de fruta derramado. Daniel aprieta la mano de su mamá como si fuera un salvavidas. Es su primer día. La mochila es nueva, roja, con un estegosaurio bordado. Los zapatos, en cambio, tienen todavía el polvo del camino. El polvo que trajeron desde Maracaibo.',
         },
       ],
     },
@@ -39,10 +39,10 @@ export const capitulo5: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap5/02-daniel-rostro.jpg',
-          imageAlt: 'Retrato de Daniel, nino venezolano de 8 anos, mirada curiosa',
+          imageAlt: 'Retrato de Daniel, niño venezolano de 8 años, mirada curiosa',
           caption: 'Daniel',
           narration:
-            'Daniel tiene ocho anos. Llego hace tres meses desde Maracaibo, con su mama y su hermanita. Habla rapido, con acento caribeno que se le escapa en cada vocal. Sabe leer, sabe escribir, sabe contar hasta cien. Sabe dibujar caballos que parecen caballos. Pero hoy tiene miedo.',
+            'Daniel tiene ocho años. Llego hace tres meses desde Maracaibo, con su mamá y su hermanita. Habla rápido, con acento caribeno que se le escapa en cada vocal. Sabe leer, sabe escribir, sabe contar hasta cien. Sabe dibujar caballos que parecen caballos. Pero hoy tiene miedo.',
         },
         {
           id: 'cap5-p2-panel2',
@@ -52,7 +52,7 @@ export const capitulo5: Chapter = {
           imageAlt: 'Mujer joven despidiendo a su hijo en la entrada de la escuela',
           caption: 'La despedida',
           narration:
-            'Su mama se agacha, le da un beso en la frente, le acomoda el cuello de la polera. "Portate bien, mi amor. Si algo pasa, me llamas." Daniel asiente. No sabe todavia que los telefonos del colegio solo funcionan para emergencias grandes. Que las pequenas, las de todos los dias, no cuentan como emergencia.',
+            'Su mamá se agacha, le da un beso en la frente, le acomoda el cuello de la polera. "Portate bien, mi amor. Si algo pasa, me llamas." Daniel asiente. No sabe todavía que los teléfonos del colegio solo funcionan para emergencias grandes. Que las pequeñas, las de todos los días, no cuentan como emergencia.',
         },
       ],
     },
@@ -65,10 +65,10 @@ export const capitulo5: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap5/04-aula-llena.jpg',
-          imageAlt: 'Sala de clases con muchos ninos sentados en filas',
+          imageAlt: 'Sala de clases con muchos niños sentados en filas',
           caption: 'Sala 3B · 8:00 AM',
           narration:
-            'El aula tiene treinta y cinco sillas. Todas ocupadas. Los bancos son de madera vieja, con nombres grabados con compas. Daniel es el unico con acento distinto, el unico con piel mas morena, el unico que no conoce a nadie. Cuando entra, siente por primera vez esa cosa rara: ser extranjero en un cuarto lleno de gente que no lo es.',
+            'El aula tiene treinta y cinco sillas. Todas ocupadas. Los bancos son de madera vieja, con nombres grabados con compas. Daniel es el unico con acento distinto, el unico con piel más morena, el unico que no conoce a nadie. Cuando entra, siente por primera vez esa cosa rara: ser extranjero en un cuarto lleno de gente que no lo es.',
         },
       ],
     },
@@ -81,18 +81,18 @@ export const capitulo5: Chapter = {
           type: 'dialogue',
           layout: 'full',
           image: '/imagenes/cap5/05-profesora-presenta.jpg',
-          imageAlt: 'Profesora de pie frente a la clase, presentando a un nino nuevo',
+          imageAlt: 'Profesora de pie frente a la clase, presentando a un niño nuevo',
           dialogues: [
             {
               id: 'd5-1',
               character: 'Profesora',
-              text: 'Ninos, les presento a Daniel. Viene de Venezuela. Denle la bienvenida.',
+              text: 'Niños, les presento a Daniel. Viene de Venezuela. Denle la bienvenida.',
               position: 'top-right',
               style: 'speech',
             },
           ],
           narration:
-            'Treinta y cinco pares de ojos lo miran al mismo tiempo. Daniel baja la vista al suelo, al pupitre, a sus manos. Siente que su acento es una bandera que todos pueden ver, que su pelo es una bandera, que su piel es una bandera. Todo en el lo delata. Todo en el dice: no soy de aqui.',
+            'Treinta y cinco pares de ojos lo miran al mismo tiempo. Daniel baja la vista al suelo, al pupitre, a sus manos. Siente que su acento es una bandera que todos pueden ver, que su pelo es una bandera, que su piel es una bandera. Todo en el lo delata. Todo en el dice: no soy de aquí.',
         },
       ],
     },
@@ -105,18 +105,18 @@ export const capitulo5: Chapter = {
           type: 'dialogue',
           layout: 'full',
           image: '/imagenes/cap5/06-companero-burla.jpg',
-          imageAlt: 'Nino de la clase mirando con burla al nuevo companero',
+          imageAlt: 'Niño de la clase mirando con burla al nuevo compañero',
           dialogues: [
             {
               id: 'd5-2',
-              character: 'Companero',
-              text: 'Oye, venezolano, habla bien. Aqui se habla chileno.',
+              character: 'Compañero',
+              text: 'Oye, venezolano, habla bien. Aquí se habla chileno.',
               position: 'top-left',
               style: 'speech',
             },
           ],
           narration:
-            'Las risas se esparcen por el aula como una mancha de aceite. Alguien mas agrega un chiste. Daniel siente que el piso se abre bajo sus zapatos polvorientos. No sabe que responder. Sabe, en cambio, que decir algo va a empeorar las cosas. Lo sabe porque ya le paso antes. En la calle, en la feria, en el paradero.',
+            'Las risas se esparcen por el aula como una mancha de aceite. Alguien más agrega un chiste. Daniel siente que el piso se abre bajo sus zapatos polvorientos. No sabe que responder. Sabe, en cambio, que decir algo va a empeorar las cosas. Lo sabe porque ya le paso antes. En la calle, en la feria, en el paradero.',
         },
       ],
     },
@@ -129,9 +129,9 @@ export const capitulo5: Chapter = {
           type: 'reflection',
           layout: 'full',
           image: '/imagenes/cap5/07-daniel-silencio.jpg',
-          imageAlt: 'Nino sentado en su pupitre con la cabeza baja, silencioso',
+          imageAlt: 'Niño sentado en su pupitre con la cabeza baja, silencioso',
           narration:
-            'Daniel se queda callado. El silencio es lo unico que lo protege. Su mama le dijo que si alguien se burla, no responda, que no se ponga a pelear. Pero el silencio tambien pesa. Pesa en la garganta, pesa en el pecho, pesa cuando llega la noche y uno se acuerda de todas las cosas que no dijo.',
+            'Daniel se queda callado. El silencio es lo unico que lo protege. Su mamá le dijo que si alguien se burla, no responda, que no se ponga a pelear. Pero el silencio también pesa. Pesa en la garganta, pesa en el pecho, pesa cuando llega la noche y uno se acuerda de todas las cosas que no dijo.',
           decisionId: 'd5-1',
         },
       ],
@@ -145,10 +145,10 @@ export const capitulo5: Chapter = {
           type: 'establishing',
           layout: 'full',
           image: '/imagenes/cap5/08-patios-recreo.jpg',
-          imageAlt: 'Patio de escuela con ninos jugando durante el recreo',
+          imageAlt: 'Patio de escuela con niños jugando durante el recreo',
           caption: 'Recreo · 11:00 AM',
           narration:
-            'En el recreo, todos corren. Daniel se queda sentado en una banca de cemento, mirando. Los ninos saltan, se rien, se empujan, se persiguen. Tienen codigos que el no conoce. Reglas que se aprendieron entre ellos hace anos. Daniel mira sus zapatos. Les pasa el dedo por la punta, quitandoles el polvo del desierto que todavia se aferra a la tela.',
+            'En el recreo, todos corren. Daniel se queda sentado en una banca de cemento, mirando. Los niños saltan, se rien, se empujan, se persiguen. Tienen codigos que el no conoce. Reglas que se aprendieron entre ellos hace años. Daniel mira sus zapatos. Les pasa el dedo por la punta, quitandoles el polvo del desierto que todavía se aferra a la tela.',
         },
       ],
     },
@@ -161,7 +161,7 @@ export const capitulo5: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap5/09-manos-dibujando.jpg',
-          imageAlt: 'Primer plano de manos de nino dibujando en un cuaderno',
+          imageAlt: 'Primer plano de manos de niño dibujando en un cuaderno',
           caption: 'El cuaderno',
           narration:
             'Daniel saca su cuaderno de la mochila. Empieza a dibujar. Dibuja su casa en Maracaibo, con el techo rojo y las matas de mango. Dibuja a su abuela en la cocina. Dibuja el perro que tuvieron que dejar. Dibuja para no olvidar. Dibuja para que las cosas sigan existiendo, al menos en el papel.',
@@ -171,10 +171,10 @@ export const capitulo5: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap5/10-nina-se-acerca.jpg',
-          imageAlt: 'Nina chilena acercandose a mirar el cuaderno del nino nuevo',
+          imageAlt: 'Niña chilena acercandose a mirar el cuaderno del niño nuevo',
           caption: 'La visita',
           narration:
-            'Una nina se acerca. Mira el dibujo sin pedir permiso, con esa curiosidad franca de los ocho anos. Daniel espera la burla. La espera con el cuerpo tenso, como cuando alguien levanta la mano y uno ya sabe que viene el golpe. Pero la nina no se burla. Solo mira. Y eso, ya es distinto.',
+            'Una niña se acerca. Mira el dibujo sin pedir permiso, con esa curiosidad franca de los ocho años. Daniel espera la burla. La espera con el cuerpo tenso, como cuando alguien levanta la mano y uno ya sabe que viene el golpe. Pero la niña no se burla. Solo mira. Y eso, ya es distinto.',
         },
       ],
     },
@@ -187,18 +187,19 @@ export const capitulo5: Chapter = {
           type: 'dialogue',
           layout: 'full',
           image: '/imagenes/cap5/11-nina-habla.jpg',
-          imageAlt: 'Nina chilena sentada junto a Daniel conversando',
+          imageAlt: 'Niña chilena sentada junto a Daniel conversando',
           dialogues: [
             {
               id: 'd5-3',
               character: 'Antonia',
-              text: 'Yo tambien soy nueva. Llegue el ano pasado de Arica. Dibujas bien, sabes?',
-              position: 'top-right',
+              text: 'Yo también soy nueva. Llegue el año pasado de Arica. Dibujas bien, sabes?',
+              position: 'top-left',
+              className: 'bubble--corner-left',
               style: 'speech',
             },
           ],
           narration:
-            'Antonia se sienta a su lado, en la misma banca de cemento. No le pide que hable distinto. No le pide que sea otro. Solo le pide un pedazo de cuaderno para dibujar tambien. Y Daniel, por primera vez en la manana, siente que puede respirar.',
+            'Antonia se sienta a su lado, en la misma banca de cemento. No le pide que hable distinto. No le pide que sea otro. Solo le pide un pedazo de cuaderno para dibujar también. Y Daniel, por primera vez en la mañana, siente que puede respirar.',
           decisionId: 'd5-2',
         },
       ],
@@ -215,7 +216,7 @@ export const capitulo5: Chapter = {
           imageAlt: 'Daniel sonriendo por primera vez, junto a su nueva amiga',
           caption: 'Epilogo · 3:30 PM',
           narration:
-            'Al salir, Daniel corre hacia su mama. Le cuenta todo de golpe: la profesora, la burla, el dibujo, Antonia. Habla tan rapido que se le enredan las palabras. Su mama se agacha, lo abraza, le dice "te lo dije". Y Daniel, por primera vez en tres meses, no tiene miedo de manana. Y eso, para un nino de ocho anos, es todo.',
+            'Al salir, Daniel corre hacia su mamá. Le cuenta todo de golpe: la profesora, la burla, el dibujo, Antonia. Habla tan rápido que se le enredan las palabras. Su mamá se agacha, lo abraza, le dice "te lo dije". Y Daniel, por primera vez en tres meses, no tiene miedo de mañana. Y eso, para un niño de ocho años, es todo.',
         },
       ],
     },
@@ -224,14 +225,14 @@ export const capitulo5: Chapter = {
     {
       id: 'd5-1',
       question: 'Daniel debe decidir como responder a la burla',
-      context: 'El silencio lo protege, pero tambien lo aisla.',
+      context: 'El silencio lo protege, pero también lo aisla.',
       options: [
         {
           id: 'd5-1a',
           label: 'A',
           text: 'Callar y esperar que pase',
           consequence:
-            'Daniel se queda en silencio. La burla se repite los proximos dias, pero cada vez le duele menos. Aprende a sobrevivir en la escuela siendo invisible. Y la invisibilidad, a la larga, tambien es una forma de herida.',
+            'Daniel se queda en silencio. La burla se repite los próximos días, pero cada vez le duele menos. Aprende a sobrevivir en la escuela siendo invisible. Y la invisibilidad, a la larga, también es una forma de herida.',
           pedagogicalTag: 'Silencio estrategico / supervivencia escolar',
         },
         {
@@ -239,7 +240,7 @@ export const capitulo5: Chapter = {
           label: 'B',
           text: 'Responder con una broma',
           consequence:
-            'Daniel responde: "Aqui se habla chileno, pero se piensa venezolano, y se come arepa". El aula se rie. El companero se queda sin palabras. Daniel descubre que el humor desarma. Que reirse con los demas, a veces, es mas fuerte que callarse.',
+            'Daniel responde: "Aquí se habla chileno, pero se piensa venezolano, y se come arepa". El aula se rie. El compañero se queda sin palabras. Daniel descubre que el humor desarma. Que reirse con los demas, a veces, es más fuerte que callarse.',
           pedagogicalTag: 'Humor como resistencia / ingenio infantil',
         },
         {
@@ -247,7 +248,7 @@ export const capitulo5: Chapter = {
           label: 'C',
           text: 'Contarle a la profesora',
           consequence:
-            'Daniel levanta la mano, habla bajito, mira sus zapatos. La profesora interviene, el companero se disculpa a reganadientes. Daniel aprende que nombrar lo que pasa no es debilidad. Que pedir ayuda no lo hace menos valiente, solo lo hace menos solo.',
+            'Daniel levanta la mano, habla bajito, mira sus zapatos. La profesora interviene, el compañero se disculpa a reganadientes. Daniel aprende que nombrar lo que pasa no es debilidad. Que pedir ayuda no lo hace menos valiente, solo lo hace menos solo.',
           pedagogicalTag: 'Denuncia escolar / proteccion adulta',
         },
       ],
@@ -262,7 +263,7 @@ export const capitulo5: Chapter = {
           label: 'A',
           text: 'Mostrarle todos sus dibujos',
           consequence:
-            'Daniel abre su cuaderno entero. Le muestra su casa, su abuela, su perro, el arbol de mango. Antonia pregunta, se asombra, aprende. La amistad empieza con un cuaderno abierto. Y con un cuaderno abierto, tambien empieza la memoria compartida.',
+            'Daniel abre su cuaderno entero. Le muestra su casa, su abuela, su perro, el árbol de mango. Antonia pregunta, se asombra, aprende. La amistad empieza con un cuaderno abierto. Y con un cuaderno abierto, también empieza la memoria compartida.',
           pedagogicalTag: 'Apertura / compartir la memoria',
         },
         {
@@ -270,7 +271,7 @@ export const capitulo5: Chapter = {
           label: 'B',
           text: 'Mostrarle solo un dibujo',
           consequence:
-            'Daniel le muestra el arbol de mango. Solo ese. Antonia sonrie. Daniel aprende que la intimidad tambien se cuida por partes. Que no hay que entregarlo todo de golpe para que alguien se quede.',
+            'Daniel le muestra el árbol de mango. Solo ese. Antonia sonrie. Daniel aprende que la intimidad también se cuida por partes. Que no hay que entregarlo todo de golpe para que alguien se quede.',
           pedagogicalTag: 'Cuidado de la intimidad / confianza gradual',
         },
         {
@@ -278,7 +279,7 @@ export const capitulo5: Chapter = {
           label: 'C',
           text: 'Cerrar el cuaderno y guardarlo',
           consequence:
-            'Daniel guarda el cuaderno en la mochila. Antonia se queda callada, se aleja despacio. Daniel se queda solo otra vez. Aprende, sin querer, que el miedo tambien cierra puertas. Y que las puertas cerradas, a veces, no vuelven a abrirse solas.',
+            'Daniel guarda el cuaderno en la mochila. Antonia se queda callada, se aleja despacio. Daniel se queda solo otra vez. Aprende, sin querer, que el miedo también cierra puertas. Y que las puertas cerradas, a veces, no vuelven a abrirse solas.',
           pedagogicalTag: 'Miedo al rechazo / aislamiento',
         },
       ],

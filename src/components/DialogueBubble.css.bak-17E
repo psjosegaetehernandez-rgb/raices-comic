@@ -1,0 +1,88 @@
+.bubble {
+  position: absolute;
+  max-width: 42%;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--paper-cream);
+  border: var(--border-thick);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  z-index: 3;
+}
+
+.bubble__character {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--earth-terracotta);
+  margin-bottom: 4px;
+}
+
+.bubble__text {
+  font-family: var(--font-hand);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.bubble--top-left     { top: var(--space-md); left: var(--space-md); }
+.bubble--top-right    { top: var(--space-md); right: var(--space-md); }
+.bubble--bottom-left  { bottom: var(--space-md); left: var(--space-md); }
+.bubble--bottom-right { bottom: var(--space-md); right: var(--space-md); }
+.bubble--center       { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.bubble--thought {
+  border-style: dashed;
+  border-radius: var(--radius-lg);
+}
+
+.bubble--whisper {
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.bubble--shout {
+  background-color: var(--earth-terracotta);
+  color: var(--paper-cream);
+  transform: rotate(-2deg);
+}
+
+.bubble--shout .bubble__text,
+.bubble--shout .bubble__character {
+  color: var(--paper-cream);
+}
+
+.bubble__tail {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.bubble--bottom-left .bubble__tail,
+.bubble--bottom-right .bubble__tail {
+  bottom: -20px;
+  border-top-color: var(--ink);
+}
+
+.bubble--bottom-left .bubble__tail  { left: 30px; }
+.bubble--bottom-right .bubble__tail { right: 30px; }
+
+.bubble--top-left .bubble__tail,
+.bubble--top-right .bubble__tail {
+  top: -20px;
+  border-bottom-color: var(--ink);
+}
+
+.bubble--top-left .bubble__tail  { left: 30px; }
+.bubble--top-right .bubble__tail { right: 30px; }
+
+/* ============================================================
+   Variantes de ancho de burbuja (agregado 17C)
+   ============================================================ */
+.bubble--narrow   { max-width: 32%; }
+.bubble--wide     { max-width: 60%; }
+.bubble--square   { max-width: 36%; aspect-ratio: auto; }

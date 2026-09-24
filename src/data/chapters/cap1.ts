@@ -26,7 +26,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Cordillera de los Andes vista desde el altiplano al amanecer',
           caption: 'Altiplano andino · 4:00 AM',
           narration:
-            'La cordillera respira como un animal antiguo. Bajo este cielo, el mas limpio del mundo, no hay ruido humano. Solo el viento. Solo el frio que se mete por las mangas, por el cuello, por los tobillos. Solo el silencio, que tambien pesa.',
+            'La cordillera respira como un animal antiguo. Bajo este cielo, el más limpio del mundo, no hay ruido humano. Solo el viento. Solo el frío que se mete por las mangas, por el cuello, por los tobillos. Solo el silencio, que también pesa.',
         },
       ],
     },
@@ -42,7 +42,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Paso fronterizo Visviri al amanecer',
           caption: 'Paso Visviri · 4:30 AM',
           narration:
-            'A lo lejos, cuatro luces amarillas. Un reten. Amaru las mira sin pestanear. Su abuela le dijo una vez que la frontera no es una linea: es una herida que se abre y se cierra todos los dias. Y el, ahora, la esta cruzando.',
+            'A lo lejos, cuatro luces amarillas. Un reten. Amaru las mira sin pestañear. Su abuela le dijo una vez que la frontera no es una linea: es una herida que se abre y se cierra todos los días. Y el, ahora, la esta cruzando.',
         },
       ],
     },
@@ -71,12 +71,12 @@ export const capitulo1: Chapter = {
           type: 'close-up',
           layout: 'half',
           image: '/imagenes/cap1/02-amaru-rostro.jpg',
-          imageAlt: 'Retrato de Amaru, joven aymara de 24 anos',
+          imageAlt: 'Retrato de Amaru, joven aymara de 24 años',
           narration:
-            'En el bolsillo derecho, envuelta en un pedazo de tela, la semilla de quinoa. Su abuela se la puso en la mano la ultima manana, sin explicaciones. Solo dijo: "Donde la plantes, echaras raices".',
+            'En el bolsillo derecho, envuelta en un pedazo de tela, la semilla de quinoa. Su abuela se la puso en la mano la última mañana, sin explicaciones. Solo dijo: "Donde la plantes, echaras raíces".',
           narrativeBoxes: [
             {
-              text: 'Donde la plantes, echaras raices.',
+              text: 'Donde la plantes, echaras raíces.',
               position: 'bottom-left',
               style: 'quote',
             },
@@ -90,7 +90,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Semilla dorada de quinoa brotando entre grietas',
           caption: 'La semilla',
           narration:
-            'Es pequena. Dorada. Podria perderse entre los dedos sin dejar rastro. Pero pesa. Pesa como el lago Titicaca, como el patio de la casa, como los ojos de su abuela la ultima vez que lo vio.',
+            'Es pequeña. Dorada. Podría perderse entre los dedos sin dejar rastro. Pero pesa. Pesa como el lago Titicaca, como el patio de la casa, como los ojos de su abuela la última vez que lo vio.',
         },
       ],
     },
@@ -103,9 +103,9 @@ export const capitulo1: Chapter = {
           type: 'dialogue',
           layout: 'full',
           image: '/imagenes/cap1/03-coyote.jpg',
-          imageAlt: 'Hombre de 45 anos con sombrero, mirada calculadora',
+          imageAlt: 'Hombre de 45 años con sombrero, mirada calculadora',
           narration:
-            'El hombre lo mira sin apuro. Sonrie con el cigarro entre los dientes. "Buscas cruzar? Yo te ayudo. Tiene un costo." Su voz es aceitosa, de esas que se pegan. Sus ojos no sonrien.',
+            'El hombre lo mira sin apuro. Sonríe con el cigarro entre los dientes. "Buscas cruzar? Yo te ayudo. Tiene un costo." Su voz es aceitosa, de esas que se pegan. Sus ojos no sonrien.',
         },
       ],
     },
@@ -120,7 +120,7 @@ export const capitulo1: Chapter = {
           image: '/imagenes/cap1/04-amaru-solo.jpg',
           imageAlt: 'Amaru caminando solo en el desierto',
           narration:
-            'Amaru piensa. Hay caminos que se pagan con dinero y caminos que se pagan con miedo. Y hay caminos, los mas raros, que se pagan con paciencia. Ninguno es gratis. Todos dejan marca.',
+            'Amaru piensa. Hay caminos que se pagan con dinero y caminos que se pagan con miedo. Y hay caminos, los más raros, que se pagan con paciencia. Ninguno es gratis. Todos dejan marca.',
           decisionId: 'd1',
         },
       ],
@@ -137,7 +137,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Grupo de 6 familias migrantes alrededor de una olla comun',
           caption: 'Camino a Chile · 6:45 AM',
           narration:
-            'Un grupo de familias camina sin hablar. Una mujer le pasa la botella de agua a un viejo. Un nino comparte el pan con otro. Nadie dice nada. La comunidad, a veces, es esto: un gesto, una botella, un pan partido en dos.',
+            'Un grupo de familias camina sin hablar. Una mujer le pasa la botella de agua a un viejo. Un niño comparte el pan con otro. Nadie dice nada. La comunidad, a veces, es esto: un gesto, una botella, un pan partido en dos.',
         },
       ],
     },
@@ -152,7 +152,7 @@ export const capitulo1: Chapter = {
           image: '/imagenes/cap1/11-manos.jpg',
           imageAlt: 'Manos oscuras entrelazadas con cadenas rotas',
           narration:
-            'Las manos se entrelazan. Son manos que no se conocen, manos que quiza no se vuelvan a ver. Pero ahora, en este paso, son las unicas manos disponibles. Quien camina solo llega mas rapido. Quien camina acompanado, llega mas lejos.',
+            'Las manos se entrelazan. Son manos que no se conocen, manos que quiza no se vuelvan a ver. Pero ahora, en este paso, son las unicas manos disponibles. Quien camina solo llega más rápido. Quien camina acompanado, llega más lejos.',
         },
       ],
     },
@@ -168,7 +168,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Olla comun en patio compartido del campamento',
           caption: 'Olla comun · 11:30 AM',
           narration:
-            'La olla comun hierve desde temprano. Lo poco que hay, se reparte: un plato para cada familia, sin importar cuantos trajeron. Asi se sobrevive cuando no hay nada. No con lo que se tiene. Con lo que se comparte.',
+            'La olla comun hierve desde temprano. Lo poco que hay, se reparte: un plato para cada familia, sin importar cuantos trajeron. Así se sobrevive cuando no hay nada. No con lo que se tiene. Con lo que se comparte.',
         },
       ],
     },
@@ -184,7 +184,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Llegada a Alto Hospicio al atardecer',
           caption: 'Alto Hospicio · 7:45 PM',
           narration:
-            'El atardecer pinta el cerro de naranja y polvo. Alto Hospicio: miles de casas de madera, todas colgadas de la misma ladera, todas con las mismas lonas azules en el techo. Aqui empieza otra vida. Aqui, tambien, empieza el olvido.',
+            'El atardecer pinta el cerro de naranja y polvo. Alto Hospicio: miles de casas de madera, todas colgadas de la misma ladera, todas con las mismas lonas azules en el techo. Aquí empieza otra vida. Aquí, también, empieza el olvido.',
         },
       ],
     },
@@ -200,7 +200,7 @@ export const capitulo1: Chapter = {
           imageAlt: 'Vista panoramica de Alto Hospicio al atardecer',
           caption: 'Campamento Renacer · 8:00 PM',
           narration:
-            'El campamento huele a tierra mojada, a lena humeda, a comida que no alcanza pero se comparte. Amaru deja la mochila en el suelo de tierra. Este es, por ahora, su hogar. Manana veremos.',
+            'El campamento huele a tierra mojada, a lena húmeda, a comida que no alcanza pero se comparte. Amaru deja la mochila en el suelo de tierra. Este es, por ahora, su hogar. Mañana veremos.',
         },
       ],
     },
@@ -213,10 +213,10 @@ export const capitulo1: Chapter = {
           type: 'reflection',
           layout: 'full',
           image: '/imagenes/cap1/15-raices.jpg',
-          imageAlt: 'Raices de arbol entrelazadas bajo tierra',
+          imageAlt: 'Raíces de árbol entrelazadas bajo tierra',
           caption: 'Epilogo',
           narration:
-            'Esa noche, cuando todos duermen, Amaru cava un hueco con las manos en un rincon del patio. Deposita la semilla. La cubre con tierra mojada. No sabe si germinara —el desierto no perdona—. Pero sabe que las raices, cuando encuentran tierra, siempre encuentran la forma.',
+            'Esa noche, cuando todos duermen, Amaru cava un hueco con las manos en un rincon del patio. Deposita la semilla. La cubre con tierra mojada. No sabe si germinara —el desierto no perdona—. Pero sabe que las raíces, cuando encuentran tierra, siempre encuentran la forma.',
         },
       ],
     },
@@ -240,7 +240,7 @@ export const capitulo1: Chapter = {
           label: 'B',
           text: 'Rechazar y buscar otra ruta',
           consequence:
-            'Amaru camina solo durante horas. Encuentra un camino alternativo, pero llega exhausto. Descubre que la autonomia tiene un costo fisico. Y que a veces, caminar solo es la unica forma de seguir siendo uno mismo.',
+            'Amaru camina solo durante horas. Encuentra un camino alternativo, pero llega exhausto. Descubre que la autonomia tiene un costo físico. Y que a veces, caminar solo es la unica forma de seguir siendo uno mismo.',
           pedagogicalTag: 'Autonomia migrante',
         },
         {
@@ -248,7 +248,7 @@ export const capitulo1: Chapter = {
           label: 'C',
           text: 'Unirse a otros migrantes',
           consequence:
-            'Un grupo de familias lo invita a caminar juntos. Comparten agua, pan y silencios. Amaru entiende que la comunidad es tambien un modo de cruzar. Y que las manos prestadas, a veces, sostienen mas que las propias.',
+            'Un grupo de familias lo invita a caminar juntos. Comparten agua, pan y silencios. Amaru entiende que la comunidad es también un modo de cruzar. Y que las manos prestadas, a veces, sostienen más que las propias.',
           pedagogicalTag: 'Malungaje / comunidad en transito',
         },
       ],

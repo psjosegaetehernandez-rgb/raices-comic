@@ -1,0 +1,102 @@
+/* src/components/DownloadPdfButton.css
+   Botón de descarga del PDF al final de cada capítulo.
+*/
+
+.download-pdf {
+  margin: var(--space-2xl, 48px) auto var(--space-lg, 24px);
+  padding: 0 var(--space-md, 16px);
+  max-width: 720px;
+}
+
+.download-pdf__inner {
+  background: linear-gradient(160deg, #faf6ec 0%, #f0e6d2 100%);
+  border: 2px solid var(--earth-terracotta, #c16c4a);
+  border-radius: 12px;
+  padding: 28px 32px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(31, 27, 22, 0.08);
+}
+
+.download-pdf__eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--earth-terracotta, #c16c4a);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.download-pdf__title {
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: var(--ink, #1f1b16);
+  font-weight: 600;
+}
+
+.download-pdf__lead {
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 1.55;
+  color: #4a3f2e;
+  margin: 0 0 20px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-pdf__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--earth-terracotta, #c16c4a);
+  color: #faf6ec;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 4px 12px rgba(193, 108, 74, 0.35);
+}
+
+.download-pdf__cta:hover {
+  transform: translateY(-2px);
+  background: #a85b3d;
+  box-shadow: 0 8px 20px rgba(193, 108, 74, 0.45);
+}
+
+.download-pdf__cta:active {
+  transform: translateY(0);
+}
+
+.download-pdf__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.download-pdf__meta {
+  font-size: 11px;
+  opacity: 0.85;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  background: rgba(250, 246, 236, 0.2);
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.download-pdf__hint {
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  font-size: 11px;
+  color: #8a7a5c;
+  margin: 16px 0 0;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 520px) {
+  .download-pdf__inner { padding: 22px 20px; }
+  .download-pdf__title { font-size: 20px; }
+  .download-pdf__cta { padding: 12px 20px; font-size: 14px; flex-wrap: wrap; justify-content: center; }
+}

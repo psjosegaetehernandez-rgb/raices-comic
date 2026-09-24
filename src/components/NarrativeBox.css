@@ -8,8 +8,9 @@
   border: var(--border-thin);
   border-left: 4px solid var(--earth-sienna);
   font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
   color: var(--ink);
   box-shadow: var(--shadow-soft);
   z-index: 2;

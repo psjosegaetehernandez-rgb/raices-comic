@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const projectRoot = join(__dirname, '..');
 
-const url = process.argv[2] || 'http://localhost:5173/capitulo/cap1';
+const url = process.argv[2] || 'http://localhost:5173/print/cap1';
 const outputName = process.argv[3] || 'raices-capitulo-1.pdf';
 const outputPath = join(projectRoot, 'public', outputName);
 

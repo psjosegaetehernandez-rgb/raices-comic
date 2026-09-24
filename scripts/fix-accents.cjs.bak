@@ -1,0 +1,140 @@
+// scripts/fix-accents.js
+// Corrige tildes y ñ faltantes en src/data/chapters/capN.ts
+// Uso:  node scripts/fix-accents.js --dry   (solo reporte)
+//       node scripts/fix-accents.js         (aplica cambios)
+
+const fs   = require('fs');
+const path = require('path');
+
+const DRY          = process.argv.includes('--dry');
+const CHAPTERS_DIR = path.join(__dirname, '..', 'src', 'data', 'chapters');
+
+// --- Diccionario SEGURO (sin ambigüedad semántica) ---
+const DICT = {
+  // Genéricos
+  'anos':'años','ano':'año',
+  'despues':'después','tambien':'también',
+  'mama':'mamá','dia':'día','dias':'días','manana':'mañana',
+  'pais':'país','paises':'países',
+  'publico':'público','publica':'pública','publicos':'públicos','publicas':'públicas',
+  'titulo':'título','titulos':'títulos',
+  'tramite':'trámite','tramites':'trámites',
+  'extranjeria':'extranjería',
+  'companero':'compañero','companera':'compañera',
+  'companeros':'compañeros','companeras':'compañeras',
+  'nino':'niño','nina':'niña','ninos':'niños','ninas':'niñas',
+  'pequeno':'pequeño','pequena':'pequeña',
+  'pequenos':'pequeños','pequenas':'pequeñas',
+  'enseno':'enseñó','ensenar':'enseñar','ensenanza':'enseñanza',
+  'habia':'había','habian':'habían',
+  'veintiseis':'veintiséis','veintidos':'veintidós','veintitres':'veintitrés',
+  'raices':'raíces','raiz':'raíz',
+  'migracion':'migración','migraciones':'migraciones',
+  'decision':'decisión','decisiones':'decisiones',
+  'corazon':'corazón','corazones':'corazones',
+  'informacion':'información','educacion':'educación',
+  'situacion':'situación','condicion':'condición','condiciones':'condiciones',
+  'nacion':'nación','naciones':'naciones','region':'región','regiones':'regiones',
+  'cancion':'canción','canciones':'canciones',
+  'japones':'japonés','japonesa':'japonesa',
+  'frances':'francés','francesa':'francesa',
+  'ingles':'inglés','inglesa':'inglesa',
+  'aleman':'alemán','alemana':'alemana',
+  'ultimo':'último','ultima':'última','ultimos':'últimos','ultimas':'últimas',
+  'proximo':'próximo','proxima':'próxima',
+  'proximos':'próximos','proximas':'próximas',
+  'numero':'número','numeros':'números',
+  'capitulo':'capítulo','capitulos':'capítulos',
+  'practica':'práctica','practicas':'prácticas',
+  'medico':'médico','medica':'médica',
+  'medicos':'médicos','medicas':'médicas',
+  'basico':'básico','basica':'básica',
+  'logico':'lógico','logica':'lógica',
+  'fisico':'físico','fisica':'física',
+  'publicamente':'públicamente',
+  'rapido':'rápido','rapida':'rápida',
+  'rapidos':'rápidos','rapidas':'rápidas',
+  'arbol':'árbol','arboles':'árboles',
+  'azucar':'azúcar','lapiz':'lápiz','lapices':'lápices',
+  'carcel':'cárcel','carceles':'cárceles',
+  'facil':'fácil','faciles':'fáciles','dificil':'difícil','dificiles':'difíciles',
+  'util':'útil','utiles':'útiles',
+  'debil':'débil','debiles':'débiles',
+  'movil':'móvil','moviles':'móviles',
+  'caracter':'carácter','caracteres':'caracteres',
+  'regimen':'régimen','regimenes':'regímenes',
+  // Nombres propios / topónimos
+  'Bolivar':'Bolívar','Bogota':'Bogotá','Peru':'Perú','Haiti':'Haití',
+  'Tarapaca':'Tarapacá','Mexico':'México',
+  // América / países
+  'Republica':'República','Dominicana':'Dominicana',
+  'Ecuador':'Ecuador','Bolivia':'Bolivia','Paraguay':'Paraguay','Uruguay':'Uruguay',
+};
+
+// --- Palabras AMBIGUAS: NO se tocan, solo se reportan ---
+const AMBIGUOUS = ['que','como','donde','cuando','quien','cual','cuales',
+                   'mas','aun','esta','estan','hacia','solo','papa',
+                   'el','tu','mi','se','si','de','aun'];
+
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const reWord = w => new RegExp(`(?<![\\p{L}\\p{N}_])${esc(w)}(?![\\p{L}\\p{N}_])`, 'gu');
+
+function processFile(file) {
+  const full = path.join(CHAPTERS_DIR, file);
+  const src  = fs.readFileSync(full, 'utf8');
+  let out    = src;
+  const applied = [];
+  const flagged = [];
+
+  // 1) Aplicar diccionario seguro
+  for (const [from, to] of Object.entries(DICT)) {
+    if (from === to) continue;
+    const re = reWord(from);
+    if (re.test(out)) {
+      out = out.replace(re, to);
+      applied.push(`${from} → ${to}`);
+    }
+  }
+
+  // 2) Reportar (sin tocar) palabras ambiguas
+  const lines = out.split(/\r?\n/);
+  lines.forEach((line, i) => {
+    for (const w of AMBIGUOUS) {
+      if (reWord(w).test(line)) {
+        flagged.push(`L${i + 1}: [${w}]  ${line.trim().slice(0, 90)}`);
+        break;
+      }
+    }
+  });
+
+  return { full, src, out, applied, flagged };
+}
+
+(function main() {
+  const files = fs.readdirSync(CHAPTERS_DIR).filter(f => /^cap\d+\.ts$/.test(f)).sort();
+  let totalApplied = 0, totalFlagged = 0;
+
+  for (const f of files) {
+    const { full, src, out, applied, flagged } = processFile(f);
+    console.log(`\n════ ${f} ════`);
+    if (applied.length) {
+      console.log(`  ✅ Correcciones aplicadas (${applied.length}):`);
+      applied.forEach(a => console.log(`     · ${a}`));
+      totalApplied += applied.length;
+      if (!DRY) fs.writeFileSync(full, out, 'utf8');
+    } else {
+      console.log('  ✅ Sin correcciones pendientes en el diccionario seguro.');
+    }
+    if (flagged.length) {
+      console.log(`  ⚠️  Palabras ambiguas a revisar MANUALMENTE (${flagged.length}):`);
+      flagged.slice(0, 12).forEach(x => console.log(`     · ${x}`));
+      if (flagged.length > 12) console.log(`     … (+${flagged.length - 12} más)`);
+      totalFlagged += flagged.length;
+    }
+  }
+
+  console.log(`\n──── RESUMEN ${DRY ? '(DRY RUN)' : ''} ────`);
+  console.log(`Correcciones aplicadas : ${totalApplied}`);
+  console.log(`Ambigüedades a revisar : ${totalFlagged}`);
+  if (DRY) console.log('👉 Ejecuta sin --dry para aplicar cambios.');
+})();
